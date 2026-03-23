@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+  <form>
+
+<label for="name">Name:</label>
+<input type="text" name="userName" id="name" required>
+
+<br><br>
+
+<label for="email">Email:</label>
+<input type="email" name="userEmail" id="email" required>
+
+<br><br>
+
+<label for="age">Age:</label>
+<input type="number" name="userAge" id="age" min="1" max="120">
+
+<br><br>
+
+<label for="password">Password:</label>
+<input type="password" name="userPassword" id="password" minlength="6" required>
+
+<br><br>
+
+
+<label for="gender">Gender</label>
+
+<input type="radio" name="userGender" value="male" id="male">
+<label for="male">Male</label>
+
+<input type="radio" name="userGender" value="female" id="female">
+<label for="female">Female</label>
+
+<input type="radio" name="userGender" value="other" id="other">
+<label for="other">Other</label>
+
+
+<br><br>
+
+<label for="date">Date:</label>
+<input type="date" name="userDate" id="date">
+
+<br><br>
+
+<label for="country">Country:</label>
+<select name="userCountry" id="country">
+  <option value="">Select country</option>
+  <option value="india">India</option>
+  <option value="usa">USA</option>
+  <option value="england">England</option>
+</select>
+
+<br><br>
+
+<label for="file">Upload file</label>
+<input type="file" name="userFile" id="file">
+
+<br><br>
+
+<input type="checkbox" name="userTerms" id="terms" required>
+<label for="terms">I agree to the terms and conditions</label>
+
+<br><br>
+
+<label for="phone">Phone:</label>
+<input type="tel" name="userPhone" id="phone" pattern="[0-9]{10}" required>
+
+<br><br>
+
+<input type="submit">
+<input type="reset">
+
+</form>
+  </body>
+</html>

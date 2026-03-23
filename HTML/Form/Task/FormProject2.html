@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1.0">
+    <title>Form Project 2</title>
+</head>
+<body>
+    <form>
+        <h1>Job Application: Entry Level MERN Stack Developer</h1>
+        <p>Thank you for your interest in joining our team. Please fill out the application below.</p>
+
+    <hr>
+
+<!-- Peronal Information -->
+
+    <h2>Personal Information</h2>
+    <label >Full Name:</label>
+    <br>
+    <input type="text" required name="username" placeholder="e.g.,Arjun Kumar">
+    <br><br>
+    <label for="useremail">Email:</label>
+    <br>
+    <input type="email" required name="useremail" placeholder="e.g., arjunkumar@gmail.com">
+    <br><br>
+    <label for="contact">Phone:</label>
+    <br>    
+    <input type="tel" required name="contact" placeholder="+91-9876543210">
+    <br><br>
+    <label for="linkedin">LinkedIn Profile URL:</label>
+    <br>
+    <input type="url" required placeholder="https://linkedin.com/in/yo" name="linkedin">
+    <br><br><hr>
+
+    <!-- Professional Experience -->
+
+    <h2>Professional Experience</h2>
+    <label>Upload Your Resume (PDF or DOCX):</label>
+    <br>
+    <input type="file">
+    <br><br>
+    <label>Cover Letter:</label>
+    <br>
+    <textarea rows="8" cols="30">Tell us Why you're a great fit for this role...</textarea>
+
+    <br><br>
+    <label>Years of Professional Experience:</label>
+    <br>
+    <input type="number" min="0">
+<br><br>
+    <label for="">Earliest Possible Start Date:</label><br>
+    <input type="date">
+    <br><br>
+    <hr>
+
+    <!-- Skills & Availability -->
+
+    <h2>Skills & Availability</h2>
+    <label>Primary Skillset (Choose one):</label>
+    <br>
+    <input type="radio" id = "front" name="skillset" value="Frontend Development">
+    <label for="front">Frontend Development</label>
+    <br>
+    <input type="radio" id="back" name="skillset" value="Backend Development">
+    <label for="back">Backend Development</label>
+    <br>
+    <input type="radio" id="full" name="skillset" value="Full-Stack Development">
+    <label for="full">Full-Stack Development</label>
+    <br><br>
+    <label>Additional Skills (Select all that apply):</label>
+    <br>
+    <input type="checkbox" id="react" name="skills" value="React">
+<label for="react">React</label>
+<br>
+<input type="checkbox" id="nodejs" name="skills" value="Node.js">
+<label for="nodejs">Node.js</label>
+<br>
+<input type="checkbox" id="database" name="skills" value="Database">
+<label for="database">Database Management</label>
+<br>
+<input type="checkbox" id="cloud" name="skills" value="Cloud">
+<label for="cloud">Cloud/DevOps</label>
+    <br><br>
+    <label>Preferred Work Type:</label>
+<br>
+<select name="worktype">
+    <option value="Full-Time">Full-Time</option>
+    <option value="Part-Time">Part-Time</option>
+    <option value="Contract">Contract</option>
+</select>
+<br><br><hr>
+
+<!-- Final Confirmation -->
+
+<h2>Final Confirmation</h2>
+<input type="checkbox" id="final">
+<label for="final">I am legally authorized to work in this country</label>
+<br><br>
+<label>How name you hear about us?</label>
+<br>
+<input type="text" placeholder="e.g., Linkedin, company">
+<br><br>
+<input type="submit" value="Submit Application">
+<input type="reset" value="Clear Form">
+
+
+<br><br>
+
+</body>
+</html>
+
+<!-- http://127.0.0.1:5500/HTML/Form/Task/FormProject2.html?username=Vishal+Chitrode&useremail=chitrodevishal%40gmail.com&contact=9876543210&linkedin=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fvishal-chitrode-659649317%2F&skillset=Full-Stack+Development&skills=React&skills=Node.js&worktype=Part-Time -->
+
+<!-- 
+
+| Element      | Needs `name`? |
+| ------------ | ------------- |
+| `<input>`    | ✅ Yes        |
+| `<select>`   | ✅ Yes        |
+| `<textarea>` | ✅ Yes        |
+| `<option>`   | ❌ No         |
+
+
+Here is a **clear, concise summary** of how the `name` attribute works in HTML forms.
+
+---
+
+# ✅ Where `name` Works (Form Data is Sent)
+
+The `name` attribute must be on **form controls** — these are the only elements whose values get submitted.
+
+### ✔ Supported Elements
+
+| Tag          | Works with `name`    | Example                                |
+| ------------ | -------------------- | -------------------------------------- |
+| `<input>`    | ✅ Yes                | `<input name="email">`                 |
+| `<select>`   | ✅ Yes                | `<select name="course">`               |
+| `<textarea>` | ✅ Yes                | `<textarea name="message"></textarea>` |
+| `<button>`   | ✅ (if submit button) | `<button name="action">`               |
+
+---
+
+# ❌ Where `name` Does NOT Work
+
+These elements do **not send data**, so `name` is useless here:
+
+| Tag                      | Why                                           |
+| ------------------------ | --------------------------------------------- |
+| `<label>`                | Only for UI (links text to input)             |
+| `<option>`               | Value comes from `<select>`                   |
+| `<div>`, `<span>`, `<p>` | Not form controls                             |
+| `<form>`                 | Uses `action` & `method`, not `name` for data |
+
+---
+
+# 🧠 Key Rule
+
+> ✅ **Only form controls with `name` are included in submission**
+
+---
+
+# 🔍 How Data is Sent
+
+Example:
+
+```html
+<input type="text" name="username" value="Vishal">
+```
+
+👉 URL becomes:
+
+```text
+?username=Vishal
+```
+
+---
+
+# 📌 Special Cases
+
+## 1. Radio Buttons
+
+```html
+<input type="radio" name="gender" value="Male">
+<input type="radio" name="gender" value="Female">
+```
+
+👉 Only **selected one** is sent:
+
+```text
+gender=Male
+```
+
+---
+
+## 2. Checkboxes
+
+```html
+<input type="checkbox" name="skills" value="React">
+<input type="checkbox" name="skills" value="Node">
+```
+
+👉 Multiple values:
+
+```text
+skills=React&skills=Node
+```
+
+---
+
+## 3. Select Dropdown
+
+```html
+<select name="course">
+  <option value="CSE">CSE</option>
+</select>
+```
+
+👉 Output:
+
+```text
+course=CSE
+```
+
+---
+
+# 🚫 Common Mistake (Your Case)
+
+```html
+<label name="skills">React</label> ❌
+```
+
+✔ Correct:
+
+```html
+<input type="checkbox" name="skills" value="React"> ✅
+```
+
+---
+
+# 🧾 Final Summary
+
+* `name` is **mandatory for submission**
+* Works only on:
+
+  * `<input>`
+  * `<select>`
+  * `<textarea>`
+* Does NOT work on:
+
+  * `<label>`
+  * `<option>`
+* No `name` → ❌ data not sent
+
+
+
+
+    -->
