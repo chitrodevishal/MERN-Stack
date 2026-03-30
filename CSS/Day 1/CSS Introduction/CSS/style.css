@@ -1,0 +1,46 @@
+
+    /* Tag base selector */
+
+    head{
+        font-size: 50px;
+    }
+
+h1{
+    background-color: #ff0000;
+     
+}
+h3{
+    background-color: rgb(0,0,255);
+}
+
+
+    /* id base selector */
+#para1{
+    background-color: rgba(255, 255, 0, 0.500);
+}
+#para2{
+    background-color: hsl(250, 100%, 50%);
+    color: white;
+}
+#list {
+    background-color: magenta;
+}
+
+    /* class base selector */
+    .heading{
+    background-color: pink; 
+     font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-style: normal;
+    }
+
+
+    /* Group base selector */
+    #para1, #para2{
+       font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-size: 0.997em;
+  font-style: normal;
+    }
