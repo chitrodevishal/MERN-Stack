@@ -48,4 +48,4 @@ The emphasis is on **core concepts**, ensuring clarity before moving to advanced
 ```bash
 CSS/
 │── README.md
-│── Day 1 (CSS introduction, Box Model and Cascading and position)
+│── Day 1 (CSS introduction, Box Model and Cascading and position.)
