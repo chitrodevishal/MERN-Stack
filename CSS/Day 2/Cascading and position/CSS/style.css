@@ -1,7 +1,6 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    
+* {
+  margin: 0px;
+  padding: 0px;
 }
 div {
   background-color: black;
@@ -54,7 +53,7 @@ h2 {
   position: relative;
   top: 100px;
 
-  /* relative apni position par kisi ko nahi a sakta hain */
+  /* Relative apni position par kisi ko nahi a sakta hain */
 }
 
 h4 {
@@ -68,15 +67,12 @@ h4 {
   */
 }
 
+p {
+  background-color: violet;
+  position: absolute;
 
-p{
-    background-color: violet;
-    position: absolute;
+  left: 100px;
+  z-index: 1; /* z-index by default 0 hain  jiski jyada hongi wo upar ayenga*/
 
-    left: 100px;
-    z-index: 1; /* z-index by default 0 hain  jiski jyada hongi wo upar ayenga*/
-   
-
-    /* yeah khud ko apne nearest anchestor ke respect mein khud ko position karenga agar iske kisi parent ki position relative, sticky ya fixed hain agar parent ki position set nahi hain then fir yeah browser ke windows ke respect mein position set karenga */
-
+  /* yeah khud ko apne nearest anchestor ke respect mein khud ko position karenga agar iske kisi parent ki position relative, sticky ya fixed hain agar parent ki position set nahi hain then fir yeah browser ke windows ke respect mein position set karenga */
 }
