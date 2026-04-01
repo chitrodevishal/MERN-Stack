@@ -1,0 +1,82 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+div {
+  background-color: black;
+  color: white;
+  height: 1800px;
+  position: relative;
+}
+h3 {
+  background-color: green;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+
+  /* 
+
+    fixed ki jagah par koi element a sakta hain,
+
+    it fixed with respect to the viewport, not the document. It will stay in the same place even if the page is scrolled.
+    Why overlap occurs
+    Normal flow:
+    h1
+    h2
+    h3
+    h4
+    
+    With position: fixed:
+    h1
+    h2
+    h4   ← moves up (h3 no longer takes space)
+    -----
+    h3   ← floating on top
+
+
+    
+    Why your <h3> moved below <h4>
+
+    When you apply:
+
+    h3 {
+    position: fixed;
+    }
+    <h3> is removed from normal flow
+    <h4> shifts upward and takes its place
+    <h3> then floats independently, often appearing visually out of order
+    */
+}
+
+h2 {
+  background-color: red;
+  position: relative;
+  top: 100px;
+
+  /* relative apni position par kisi ko nahi a sakta hain */
+}
+
+h4 {
+  background-color: blue;
+  position: sticky;
+  top: 0px; /* top mention karna padenga warna sticky ki effect nahi dikhenga 
+  
+  Your <p> is not actually disappearing—it’s being covered (overlapped) after you uncomment: *{}
+  
+  
+  */
+}
+
+
+p{
+    background-color: violet;
+    position: absolute;
+
+    left: 100px;
+    z-index: 1; /* z-index by default 0 hain  jiski jyada hongi wo upar ayenga*/
+   
+
+    /* yeah khud ko apne nearest anchestor ke respect mein khud ko position karenga agar iske kisi parent ki position relative, sticky ya fixed hain agar parent ki position set nahi hain then fir yeah browser ke windows ke respect mein position set karenga */
+
+}
