@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+}
+#container{
+    background-color: darkred;
+    width: 500px;
+    height: 300px;
+    position: relative;
+}
+
+#middle{
+background-color: darkblue;
+height: 100px;
+width: 500px;
+position: absolute;
+top: 100px;
+}
+
+#circle{
+background-color: white;
+height: 100px;
+width: 100px;
+border-radius: 50%;
+position: absolute;
+top: 100px;
+left: 200px;
+}
+

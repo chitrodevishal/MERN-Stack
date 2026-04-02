@@ -1,0 +1,49 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+} */
+body{
+    background-color: black;
+}
+#container{
+    background-color: yellow;
+    width: 500px;
+    height: 300px;
+    position: relative;
+}
+.box{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+.first, .third{
+    position: absolute;
+    
+
+}
+.first{
+    position: absolute;
+    bottom: 0px;
+    height: 150px;
+}
+.second{
+    position: absolute;
+    
+}
+
+.third{
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+}
+
+.fourth{
+    width: 350px;
+    height: 150px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
