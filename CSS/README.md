@@ -49,3 +49,8 @@ The emphasis is on **core concepts**, ensuring clarity before moving to advanced
 CSS/
 │── README.md
 │── Day 1 (CSS introduction, Box Model and Cascading and position.)
+│── Day 2 (CSS introduction, Box Model and Cascading and position.)
+│── Day 3 (CSS introduction, Box Model and Cascading and position.)
+│── Day 4 (CSS introduction, Box Model and Cascading and position.)
+│── Day 5 (CSS introduction, Box Model and Cascading and position.)
+│── Day 6 (CSS introduction, Box Model and Cascading and position.)
