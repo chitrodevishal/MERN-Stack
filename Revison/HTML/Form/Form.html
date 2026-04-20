@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Revision</title>
+  </head>
+  <body>
+    <form>
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        name="username"
+        id="name"
+        required
+        placeholder="Enter your username"
+      />
+
+      <br /><br />
+
+      <label for="email">Email:</label>
+      <input
+        type="text"
+        name="useremail"
+        id="email"
+        required
+        placeholder="Enter your email"
+      />
+
+      <br /><br />
+
+      <label for="age">Age:</label>
+      <input type="number" name="userage" id="age" required min="1" max="100" />
+
+      <br /><br />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        required
+        minlength="6"
+        name="password"
+      />
+
+      <br /><br />
+
+      <label for="sex">Gender:</label>
+      <br />
+      <input type="radio" name="Gender" value="Male" id="male" />
+      <label for="male">Male</label>
+      <br />
+
+      <input type="radio" name="Gender" value="Female" id="female" />
+      <label for="female">Female</label>
+      <br />
+
+      <input type="radio" name="Gender" value="Other" id="other" />
+      <label for="other">Other</label>
+      <br /><br />
+
+      <label for="date">DOB:</label>
+      <input type="date" name="userDOB" required id="date" />
+
+      <br /><br />
+
+      <label for="file">Upload a file</label>
+      <input type="file" name="userFile" id="file" />
+
+      <br /><br />
+      <input type="checkbox" name="usercheck" id="check" required />
+      <label for="check">I agree to the terms and conditions</label>
+
+      <br /><br />
+
+      <label for="tele">Contact:</label>
+      <input type="number" required id="tele" min="10" pattern="[0-9]{10}" />
+      <br /><br />
+      <input type="submit" />
+
+      <input type="reset" />
+    </form>
+  </body>
+</html>

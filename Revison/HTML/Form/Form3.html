@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application: Senior MERN Stack Developer</title>
+  </head>
+  <body>
+    <h1>Job Application: Senior MERN Stack Developer</h1>
+    <p>
+      Thank you for your interest in joining our team. Please fill out the
+      application below.
+    </p>
+    <hr />
+    <form>
+      <h2>Personal Information</h2>
+
+      <label for="name">Full Name:</label>
+      <br />
+      <input
+        type="text"
+        id="name"
+        name="UserName"
+        required
+        placeholder="e.g., Arjun Kumar"
+      />
+      <br /><br />
+      <label for="email">Email:</label>
+      <br />
+      <input
+        type="email"
+        id="email"
+        name="UserEmail"
+        required
+        placeholder="abc@gmail.com"
+      />
+      <br /><br />
+
+      <label for="phone">Phone:</label>
+      <br />
+      <input
+        type="number"
+        id="phone"
+        name="UserPhone"
+        required
+        placeholder="e.g., 9876543210"
+        pattern="[0-9]{10}"
+      />
+      <br /><br />
+
+      <label for="linkedin">Linkedin Profile URL:</label>
+      <br />
+      <input
+        type="url"
+        id="linkedin"
+        name="UserLinkedin"
+        placeholder="https://www.linkedin.com/in/arjun-kumar"
+      />
+      <hr />
+      <h2>Professional Experience</h2>
+      <label for="resume">Upload Your Resume(PDF or DOCX):</label>
+      <br />
+      <input type="file" />
+      <br /><br />
+
+      <label for="letter">Cover Letter:</label>
+      <br />
+      <textarea
+        name="UserCoverletter"
+        id="letter"
+        cols="25"
+        rows="5"
+        placeholder="Tell us Why you're a great fit for this tole...."
+      ></textarea>
+
+      <br /><br />
+      <label for="pro">Years of Professional Experience:</label>
+      <br />
+      <input
+        type="number"
+        name="UserExperience"
+        id="pro"
+        required
+        min="0"
+        max="70"
+        placeholder="e.g., 5"
+      />
+
+      <br /><br />
+
+      <label for="startdate">Earliest Start Date:</label>
+      <br />
+      <input type="date" id="startdate" name="UserStartDate" />
+      <br /><br />
+
+      <hr />
+      <h2>Skills & Availability</h2>
+
+      <label for="primary">Primary Skillset (Choose one):</label>
+      <br />
+      <input
+        type="radio"
+        id="Frontend"
+        name="Skills"
+        value="rontend Development"
+      />
+      <label for="Frontend">Frontend Development</label>
+
+      <br />
+
+      <input
+        type="radio"
+        id="backend"
+        name="Skills"
+        value="Backend Development"
+      />
+      <label for="backend">Backend Development</label>
+
+      <br />
+
+      <input
+        type="radio"
+        id="full"
+        name="Skills"
+        value="Full-Stack Development"
+      />
+      <label for="full">Full-Stack Development</label>
+
+      <br /><br />
+
+      <label for="Additional"
+        >Additional Skills (Select all that apply):
+      </label>
+      <br />
+      <input type="checkbox" id="react" name="Additional" value="React" />
+      <label for="react">React</label>
+      <br />
+      <input type="checkbox" id="node" name="Additional" value="Node.js" />
+      <label for="node">Node.js</label>
+
+      <br />
+      <input type="checkbox" id="mongo" name="Additional" value="MongoDB" />
+      <label for="mongo">MongoDB</label>
+
+      <br />
+      <input
+        type="checkbox"
+        id="express"
+        name="Additional"
+        value="Express.js"
+      />
+      <label for="express">Express.js</label>
+
+      <br />
+      <input type="checkbox" id="next" name="Additional" value="Next.js" />
+      <label for="next">Next.js</label>
+
+      <br />
+      <input type="checkbox" id="vue" name="Additional" value="Vue.js" />
+      <label for="vue">Vue.js</label>
+
+      <br /><br />
+
+      <label for="type">Preferred Work Type:</label>
+      <select name="UserWorkType" id="type">
+        <option disabled selected>Select Your Work Type</option>
+
+        <option value="Full Time">Full Time</option>
+        <option value="Part Time">Part Time</option>
+        <option value="Remote">Remote</option>
+        <option value="Internship">Internship</option>
+        <option value="Contract">Contract</option>
+        <option value="Temporary">Temporary</option>
+        <option value="Volunteer">Volunteer</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <br><br>
+
+      <hr>
+
+      <h2>Final Confirmation</h2>
+
+      <input type="checkbox" id="check" name="UserConfirmation" required>
+      <label for="check">I am legally authorized to work in the country or region where I am applying.</label>
+
+      <br><br>
+
+      <label for="hear">How do you hear about us?</label>
+      <input type="text" id="for" name="UserHear" placeholder="e.g., Linkedin, Ads">
+
+      <br><br>
+
+      <input type="submit" value="Submit Application">
+      <input type="reset" value="Clear Form">
+    </form>
+  </body>
+</html>
+
+
+
+<!-- 
+
+
+http://127.0.0.1:5500/Revison/HTML/Form/Form3.html?
+UserName=Vishal+Chitrode&
+UserEmail=chitrodevishal%40gmail.com&
+UserPhone=9876543210&
+UserLinkedin=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fvishal-chitrode-659649317%2F&
+UserCoverletter=Dear+Hiring+Manager%2C%0D%0A%0D%0AI+am+writing+to+express+my+interest+in+the+position+at+your+organization.+With+a+background+in+software+development+and+hands-on+experience+in+building+scalable+web+applications%2C+I+am+confident+in+my+ability+to+contribute+effectively+to+your+team.%0D%0A%0D%0AIn+my+current+role%2C+I+work+extensively+with+modern+technologies%2C+focusing+on+developing+efficient+and+user-friendly+solutions.+I+am+particularly+drawn+to+this+opportunity+because+of+your+company%E2%80%99s+commitment+to+innovation+and+quality.%0D%0A%0D%0AI+would+welcome+the+chance+to+discuss+how+my+skills+and+experience+align+with+your+needs.+Thank+you+for+considering+my+application.%0D%0A%0D%0ASincerely%2C%0D%0AVishal+Chitrode&
+UserExperience=0&
+UserStartDate=2026-04-20&
+Skills=Full-Stack+Development&
+Additional=React&Additional=Node.js&Additional=MongoDB&Additional=Express.js&
+UserWorkType=Full+Time&
+UserConfirmation=on&
+UserHear=Linkedin
+
+-->
