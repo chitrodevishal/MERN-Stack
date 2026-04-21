@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+    height: 1200px;
+
+}
+
+.position{
+    height: 30px;
+    width: fit-content;
+    color: white;
+    border: 5px solid red;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+}
+
+#relative{
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+
+#absolute{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+#fixed{
+    position: fixed;
+    top: 0px;
+    left: 400px;
+    margin-top: 0px;
+}
+
+#sticky{
+    position: sticky;
+    top: 0px;
+    right: 100px;
+}
+
+
+
+

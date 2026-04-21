@@ -1,0 +1,45 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+}
+.container {
+  background-color: lightgray;
+  height: 500px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+    /* justify-content work on main axis and align-items work on cross axis */
+
+}
+
+.first {
+  background-color: red;
+  /* flex-basis: 300px; */
+}
+.second {
+  background-color: green;
+    flex-shrink: 10;
+
+  flex-grow: 1;
+}
+.third {
+  background-color: blue;
+  flex-grow: 2;
+}
+.fourth {
+  background-color: yellow;
+  align-self: flex-start;
+}

@@ -1,0 +1,51 @@
+/* 
+    tag base selection
+    id base and # base selection
+    class base selection
+    group base selection
+
+    🔝 CSS Specificity Order
+    !important
+     Inline styles (style="")
+     ID selectors (#id)
+     Class selectors (.class), attribute selectors, pseudo-classes
+     Tag (element) selectors (div, p, etc.)
+     Universal selector (*) */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+h2 {
+  background-color: rgba(137, 175, 137, 0.815);
+  color: black;
+}
+
+.para1 {
+  background-color: lightpink;
+  color: purple;
+  border: 5px solid black;
+
+  text-align: start;
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2vw;
+}
+
+#para2{
+  background-color: palevioletred !important;
+  color: hsla(0, 100%, 50%, 0.800);
+  text-align: center;
+  border: 5px solid black;
+  border-radius: 20px;
+  font-size: 3vh;
+  font-weight: 600;
+  font-style: italic;
+  width: fit-content;
+}
+
+h1, .para1, #para2{
+      margin: 10px;
+  padding: 10px;
+}
