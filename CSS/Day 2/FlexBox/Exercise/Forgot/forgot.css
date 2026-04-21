@@ -1,0 +1,78 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #009578;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.container{
+    background-color: white;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    padding: 40px
+}
+h1{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-decoration: none;
+    margin-bottom: 20px;
+
+}
+
+label, input{
+    display: inline-block;
+    width: 100%;
+    
+}
+
+label{
+    margin: 10px 0px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+
+input{
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #009578;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-decoration: none;
+    font-size: 17px;
+}
