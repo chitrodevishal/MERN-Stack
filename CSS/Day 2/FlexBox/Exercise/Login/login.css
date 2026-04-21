@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: #009578;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  padding: 40px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 540;
+  font-size: 20px;
+}
+.email,
+.password {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 17px;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  border-radius: 5px;
+}
+.password {
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  height: 55px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  background-color: #009578;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.bottom{
+  text-align: center;
+  width: 100%;
+}
+
+.forgot{
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #009578;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+   font-size: 15px;
+  font-variation-settings: "wdth" 100;
+  text-decoration: none;
+}
+
+.signup {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  text-decoration: none;
+  font-size: 15px;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.bottom{
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+     display: inline-block;
+    margin-top: 10px;
+    font-weight: 540;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.signup{
+     font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #009578;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+   font-size: 15px;
+  font-variation-settings: "wdth" 100;
+  text-decoration: none;
+}

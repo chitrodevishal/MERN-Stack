@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../signup/signup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DK+Uloopet+Guides&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <h1>Sign Up</h1>
+        <label for="first">Email</label>
+        <input
+          type="email"
+          id="first"
+          placeholder="Enter Your Email"
+          name="userEmail"
+          required
+        />
+
+        <label for="second">Password</label>
+        <input
+          type="password"
+          id="second"
+          placeholder="Enter Your Password"
+          required
+          minlength="4"
+          name="Userpassword"
+        />
+
+        <label for="third">Confirm Password</label>
+        <input
+          type="password"
+          id="third"
+          placeholder="Confirm Password"
+          required
+          minlength="4"
+          name="userConfPassword"
+        />
+
+        <button>Sign Up</button>
+
+        <div class="bottom">
+          <p>Already have an account?</p>
+          <a href="../Login/login.html">Login here</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
