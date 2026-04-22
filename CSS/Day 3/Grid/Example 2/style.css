@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    background-color: black;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    height: 300px;
+    width: 400px;
+    gap: 5px;
+    background-color: black;
+}
+.Box{
+    background-color: white;
+}
+.First{
+    grid-row: 1/4;
+    grid-column: 1/2;
+}
+.Second{
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+.Third{
+    grid-column: 4/5;
+}
+.Sixth{
+    grid-row: 2/4;
+    grid-column: 4/5;
+}
