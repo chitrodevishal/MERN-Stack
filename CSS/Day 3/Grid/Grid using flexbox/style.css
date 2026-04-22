@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+
+}
+
+.container{
+    display: flex;
+    gap: 5px;
+    background-color: aqua;
+    height: 400px;
+    width: 400px;
+    display: flex;
+}
+.Box{
+    background-color: red;
+    height: 400px;
+    width: 200px;
+}
+
+.Second{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: aqua;
+}
+.Child{
+height: 200px;
+width: 200px;
+background-color: green;
+}
