@@ -5,7 +5,12 @@
 }
 body {
   background-color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .flex {
   display: flex;
   flex-direction: column;
@@ -16,6 +21,7 @@ body {
   display: flex;
   gap: 10px;
   padding: 10px;
+    border: 5px solid white;
 }
 .first,
 .second {
@@ -28,6 +34,7 @@ body {
   background-color: #f3453d;
 }
 .second {
+  background-color: white
 }
 .grid {
   display: grid;
