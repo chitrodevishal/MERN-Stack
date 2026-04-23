@@ -15,13 +15,13 @@ body {
   display: flex;
   flex-direction: column;
 
-  gap: 10px;
+  gap: 15px;
 }
 .MainFlex {
   display: flex;
-  gap: 10px;
-  padding: 10px;
-    border: 5px solid white;
+  gap: 15px;
+  padding: 15px;
+    border: 10px solid white;
 }
 .first,
 .second {
@@ -40,7 +40,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
+  gap: 15px;
 }
 .box {
   background-color: white;
