@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.404);
+    padding: 10px;
+}
+.container{
+    display: flex;
+    gap: 10px;
+
+}
+.box{
+    height: 300px;
+    width: 200px;
+}
+.first{
+    background-color: red;
+}
+.second{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.child{
+    height: 150px;
+    width: 200px;
+    background-color: blue;
+}
