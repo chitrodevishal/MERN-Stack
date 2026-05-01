@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+  gap: 10px;
+}
+.item {
+  background: gray;
+}
+.tall {
+  grid-row: span 2;
+  background-color: red;
+}
+
+.wide {
+  grid-column: span 2;
+  background-color: blue;
+}
+
+.big {
+  grid-row: span 2;
+  grid-column: span 2;
+  background-color: green;
+}

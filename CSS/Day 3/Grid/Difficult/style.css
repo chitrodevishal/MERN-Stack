@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  color: black;
+  font-size: 30px;
+}
+/* 
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 100px;
+  gap: 15px;
+  padding: 10px;
+  border: 10px solid white;
+} */
+ .container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  /* Key change */
+  height: 100vh;
+
+  /* Make rows flexible instead of fixed */
+  grid-auto-rows: 1fr;
+
+  gap: 15px;
+  padding: 10px;
+  border: 10px solid white;
+}
+.box {
+  background-color: gray;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+}
+.first {
+  grid-row: span 3;
+  background-color: #f24141;
+}
+
+.eighth {
+  grid-row: span 3;
+  grid-row: 4/7;
+  background-color: white;
+}
+.second {
+  grid-column: span 2;
+  background-color: #30d9d9;
+}
+.third {
+  grid-column: span 2;
+  background-color: #d9b36c;
+}
+.seventh {
+  grid-row: 2/7;
+  grid-column: 5/6;
+  background-color: #f24141;
+}
+.fourth {
+  grid-row: span 3;
+  background-color: #d9b36c;
+}
+.fifth {
+  grid-row: span 3;
+  grid-column: span 2;
+  background-color: white;
+}
+.sixth {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #f24141;
+}
+.ninth {
+  grid-row: span 2;
+  background-color: #30d9d9;
+}
