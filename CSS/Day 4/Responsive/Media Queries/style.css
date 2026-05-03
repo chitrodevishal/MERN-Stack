@@ -1,0 +1,70 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightgreen;
+}
+.container{
+    height: 200px;
+    width: 400px;
+    background-color: lightcoral;
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+}
+h1{
+    margin: 10px;
+    text-align: center;
+}
+p{
+    margin: 10px;
+}
+
+
+/* Desktop View:
+
+
+@media screen and (max-width:900px) {
+    .container{
+        background-color: lightcyan;
+        color: black;
+        font-size: 15px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .container{
+        background-color: lightyellow;
+        color: black;
+        font-size: 12px;
+        margin: 10px;
+    }
+} */
+
+
+/* Mobile View: */
+
+@media screen and (min-width:600px) {
+    .container{
+        background-color: lightyellow;
+        color: black;
+        font-size: 12px;
+        margin: 10px;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .container{
+        background-color: lightcyan;
+        color: black;
+        font-size: 15px;
+        margin: 10px;
+    }
+}
+
+
+
+
