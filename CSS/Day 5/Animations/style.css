@@ -1,0 +1,71 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.container{
+padding: 20px;
+position: relative;
+}
+
+.box{
+    height: 100px;
+    width: 200px;
+    background-color: white;
+    animation: moving;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+    
+}
+
+/* @keyframes moving {
+    from{
+        top: 10px;
+        left: 10px;
+        background-color: red;
+    }
+    to{
+        top: 10px;
+        left: 1000px;
+        background-color: green;
+    }
+    
+} */
+ @keyframes moving {
+    0%{
+        top: 10px;
+        left: 10px;
+        background-color: red;
+    }
+    25%{
+        top: 10px;
+        left: 1132px;
+        background-color: green;
+    }
+    50%{
+        top: 530px;
+        left: 1132px;
+        background-color: blue;
+    }
+    75%{
+        top: 530px;
+        left: 10px;
+        background-color: yellow;
+    }
+    100%{
+         top: 10px;
+        left: 10px;
+        background-color: red;
+    }
+
+    
+}
