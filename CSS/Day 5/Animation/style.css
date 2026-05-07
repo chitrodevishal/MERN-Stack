@@ -1,0 +1,85 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  position: relative;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  background-color: red;
+  animation-name: moving;
+
+  /* animation duration will change their position and background color in 3s */
+
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  /* animation-iteration-count: infinite; */
+  animation-iteration-count: 3;
+  /* animation-iteration-count: 1; */
+
+  /* During the delay period, apply the styles from the first keyframe (from) immediately. */
+  /* animation-fill-mode: backwards; */
+
+  /* After animation finishes, keep the styles from the last keyframe (to). */
+  animation-fill-mode: forwards;
+
+  animation-direction: alternate;
+}
+
+@keyframes moving {
+  /* from {
+    background-color: orange;
+    top: 10px;
+    left: 0px;
+  }
+  to {
+    background-color: rebeccapurple;
+    top: 10px;
+    left: 500px;
+  } */
+
+  0%{
+    top: 10px;
+    left:10px;
+    background-color: orange;
+
+  }
+  25%{
+    top: 10px;
+    left: 1250px;
+    background-color: green;
+  }
+  50%{
+    top: 530px;
+    left: 1250px;
+    background-color: blue;
+  }
+  75%{
+    top: 530px;
+    left: 10px;
+    background-color: aqua;
+  }
+  100%{
+    top: 10px;
+    left: 10px;
+    background-color: brown;
+  }
+}
+
+
