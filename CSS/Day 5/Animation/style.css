@@ -66,12 +66,12 @@
     background-color: green;
   }
   50%{
-    top: 530px;
+    top: 650px;
     left: 1250px;
     background-color: blue;
   }
   75%{
-    top: 530px;
+    top: 650px;
     left: 10px;
     background-color: aqua;
   }

@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  background-color: black;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+  /* position: absolute; */
+}
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: orange;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: moving;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes moving {
+  from {
+    top: 0px;
+    left: 0px;
+  }
+  to {
+    top: 10px;
+    left: 1200px;
+  }
+}
