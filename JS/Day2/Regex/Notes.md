@@ -1,7 +1,9 @@
 ### Regular Expressions (Regex) :
+
 Powerful tool for pattern matching in strings. Regex helps powerful text matching
 
 ### Used for:
+
 email validation
 password checking
 search engines
@@ -9,9 +11,11 @@ search engines
 In JavaScript, Regular Expressions (Regex) are objects used for matching and manipulating character combinations in strings
 
 ### Literal Notation:
+
 Enclosed in slashes. Use this for static patterns to improve performance.
 
-### Constructor Function: 
+### Constructor Function:
+
 Uses the RegExp object. Use this for dynamic patterns, such as user input.
 
 | Part    | Meaning         |
@@ -23,6 +27,7 @@ Uses the RegExp object. Use this for dynamic patterns, such as user input.
 Flags : Flags change regex behavior.
 
 ### Common Flags (Modifiers)
+
 Flags modify how the search is performed:
 g: Global search; find all matches rather than stopping after the first.
 i: Case-insensitive search.
