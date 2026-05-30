@@ -11,7 +11,6 @@ console.log(Math.round(num)); // rounds off to the nearest integer
 console.log(Math.round(num)); // we can call the method directly on the Math object without creating an instance
 
 console.log(Math.random()); // generates a random number between 0 and 1
-
 console.log(Math.max(1, 2, 3, 4, 5, 6, 7, 8, 9));
 console.log(Math.min(1, 2, 3, 4, 5, 6, 7, 8, 9));
 
