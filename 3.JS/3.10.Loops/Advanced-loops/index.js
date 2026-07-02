@@ -11,7 +11,7 @@ let user = {
   },
 };
 console.log(user);
-// For in loop usercase:  we can iterate over key in an object ( user )
+// For in loop :  we can iterate over key in an object ( user )
 // for(let key in user) here key is variable name and user is obj name
 for (let key in user) {
   // console.log(key) // this will print all key from objects
