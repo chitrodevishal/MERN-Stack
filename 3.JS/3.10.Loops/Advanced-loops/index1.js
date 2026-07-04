@@ -5,7 +5,8 @@ obj.name = "Chitrode";
 obj.age = 24;
 // console.log(obj) // this will return { name: 'Chitrode', age: 24 }
 
-console.log(Object.getOwnPropertyDescriptors(obj, "name")); // those 3 properties own by default while we creating objects
+console.log(Object.getOwnPropertyDescriptors(obj, "name"));
+ // Those 3 properties own by default while we creating objects
 //  writable: true: meaning we will update or change the value of object keys if keys writable is true else we will not
 
 // enumerable: true,
