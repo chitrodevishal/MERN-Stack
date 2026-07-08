@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f4f4;
+}
+
+.container {
+  width: 450px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#quote {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: black;
+  border-left: 2px solid blue;
+  padding: 20px;
+  text-align: justify;
+  white-space: wrap;
+  background-color: rgba(211, 211, 211, 0.178);
+}
