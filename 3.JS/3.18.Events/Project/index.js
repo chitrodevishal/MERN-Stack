@@ -187,8 +187,8 @@ btn.addEventListener("click", (event) => {
   console.log(event) //PointerEvent 
   console.log(event.target) // <button>Click Me</button>
   console.log(event.type) // click
-  console.log(event.clientX); // position
-  console.log(event.clientY); // position
+  console.log(event.clientX); // position of X axis 
+  console.log(event.clientY); // position of Y axis
   const quoteElement = document.getElementById("quote");
   quoteElement.innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
 });

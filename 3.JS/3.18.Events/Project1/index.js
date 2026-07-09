@@ -15,5 +15,5 @@ btn.addEventListener('click', ()=>{
     // output the result
     const output = number1 + number2
     const result = document.getElementById('result')
-    result.textContent = output
+    result.textContent = "Result :" + output
 })
