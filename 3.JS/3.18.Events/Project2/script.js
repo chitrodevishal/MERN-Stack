@@ -8,7 +8,7 @@ document.addEventListener("click", (event) => {
   const y = event.clientY;
 
   circle.style.left = `${x-25}px`; // set position
-  circle.style.top = `${y-25}px`;
+  circle.style.top = `${y-25}px`; // set position
 
   const bg = [
     "red",
