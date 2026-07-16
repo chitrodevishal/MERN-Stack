@@ -18,7 +18,7 @@
 
 "use strict"
 function name(){
-    console.log(this) // this is not part of global scope else everything is part of glovbal scope 
+    console.log(this) // this is not part of global scope else everything is part of global scope 
 }
 
 name() //undefined
