@@ -24,6 +24,7 @@ create("Express");
 create("MongoDB");
 
 // 2.Create a TextNode (Text without any tag) space and next line came within textnode
+
 const textnode = document.createTextNode("Hello World");
 // const parent = document.getElementById("root");
 parent.appendChild(textnode);
@@ -51,7 +52,7 @@ element3.setAttribute("class", "changed");
 element3.removeAttribute("id"); //if we want to remove any attribute
 
 // add nodes to the DOM
-// wherver we want to add nodes we want parent access
+// whenever we want to add nodes we want parent access
 // const parent = document.getElementById("root");
 const element4 = document.createElement("li");
 element4.innerHTML = "AWS";
@@ -64,7 +65,8 @@ console.log(child); // here we get access to any element
 // parent.insertBefore(element4, child); //insertBefore(newNode, referenceNode)
 
 parent.replaceChild(element4, child);  // replaceChild(newNode, oldNode)
-
+// parent.innerHTML += "TS"
+// parent.innerHTML += "<li>Docker</li>"
 // parent.innerHTML = parent.innerHTML + "<li>Docker</li>"
 
 // if we want to add div before Unordered list

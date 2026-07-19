@@ -162,7 +162,7 @@ const quotes = [
 ];
 
 function quote() {
-  const quoteElement = document.getElementById("quo  te");
+  const quoteElement = document.getElementById("quote");
   quoteElement.innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
 }
 

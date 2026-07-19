@@ -48,19 +48,19 @@ const child = document.getElementById("child")
 // OR
 child.addEventListener("click", (event) => {
     console.log("Child")
-    console.log(event.target)
-    console.log(event.currentTarget)
+    // console.log(event.target)
+    // console.log(event.currentTarget)
  
 }, false )
 parent.addEventListener("click", (event) => {
     console.log("Parent")
-    console.log(event.target)
-    console.log(event.currentTarget)
+    // console.log(event.target)
+    // console.log(event.currentTarget)
    
-}, true)
+}, false)
 grandparent.addEventListener("click", (event) => {
     console.log("Grandparent")
-    console.log(event.target)
-    console.log(event.currentTarget)
+    // console.log(event.target)
+    // console.log(event.currentTarget)
    
 }, false)
