@@ -1,0 +1,69 @@
+const form = document.querySelector("form");
+// form.addEventListener("click", (event)=>{
+//     console.log(event.target.id)
+
+// })
+// form.addEventListener("input", (event)=>{
+//     console.log(event.target.value)
+
+// })
+// form.addEventListener("change", (event)=>{
+//     console.log(event.target.value)
+
+// })
+// form.addEventListener("focus", (event)=>{
+//     console.log(event.target.value) // Doesn't follow bubble
+// })
+// form.addEventListener("focusin", (event)=>{
+//     console.log(event.target.value)
+
+// })
+// focusout/ blur
+// form.addEventListener("focusout", (event)=>{
+//     console.log(event.target.value)
+
+// })
+// form.addEventListener("click", (event)=>{
+//     console.log("Single Clicked")
+
+// })
+// form.addEventListener("dblclick", (event)=>{
+//     console.log("Double Clicked")
+
+// })
+// form.addEventListener("submit", (event)=>{
+//     console.log("Form Submited")
+
+// })
+// form.addEventListener("reset", (event)=>{
+//     console.log("Form Reset")
+
+// })
+
+// Here is the way to get values of input field
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault(); // it prevent and didn't refresh
+//   const first = document.getElementById("first");
+//   console.log(first.value);
+//   const second = document.getElementById("last");
+//   console.log(second.value);
+//   const age = document.getElementById("age");
+//   console.log(age.value);
+//   const result = document.querySelector("p");
+//   result.innerText = `My Name is ${first.value} ${second.value}`;
+// });
+
+
+form.addEventListener("submit", (event)=>{
+    event.preventDefault()
+    const data = new FormData(form)
+    console.log(data)
+    // console.log(Array.from(data.keys()))
+    // console.log(Array.from(data.values()))
+    // console.log(Array.from(data.entries()))
+    for(let [i, j] of data.entries())
+    {
+        console.log(i, j)
+    }
+})
+
