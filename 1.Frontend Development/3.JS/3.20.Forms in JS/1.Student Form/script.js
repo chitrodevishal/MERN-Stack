@@ -56,14 +56,15 @@ const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
     const reset = document.querySelector("#reset")
   event.preventDefault(); // it prevent and didn't refresh
-  const data = new FormData(form);
+  const data = new FormData(form); // using FormData() when we hit submit button our data store into 
   console.log(data);
   let first = "";
   let last = "";
+  // we can iterate over iterator using for of loop and we can convert this into array using Array.From(iterator name)
   // console.log(Array.from(data.keys()))
   // console.log(Array.from(data.values()))
-  // console.log(Array.from(data.entries()))
-  for (let [i, j] of data.entries()) {
+  // console.log(Array.from(data.entries())) // return array of [[key, value]......]
+  for (let [i, j] of data.entries()) { // here i is key and j is value and we destructure object
     console.log(i, j);
     if (i === "first name") {
       first = j;
