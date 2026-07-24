@@ -55,7 +55,7 @@ const form = document.querySelector("form");
 
 form.addEventListener("submit", (event) => {
     const reset = document.querySelector("#reset")
-  event.preventDefault();
+  event.preventDefault(); // it prevent and didn't refresh
   const data = new FormData(form);
   console.log(data);
   let first = "";
