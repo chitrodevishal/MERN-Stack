@@ -1,0 +1,65 @@
+### Array ###
+* `slice` doesn't change original array
+* `splice` change original array
+
+### Object ###
+* `structuredClone` used for deep copy
+* When assigning an object, nested objects are copied by reference (shallow copy),
+* so both variables share the same nested object. To create independent nested
+* objects, use a deep copy.
+
+### Advanced Loops ###
+* For in loop :  we can iterate over key in an object ( user )
+* For in loop with Array isn't recommended.
+* For in loop always used with objects only 
+
+### Call Back function Filter map ###
+
+* For Each expect a call back function
+* For each will not return anything
+* Filter/Map return (true or false) true value accept else reject 
+* In `Map` we can modify values too
+
+### Reduce sets and Maps ###
+* Reduce create an result and result will be in any from like string, object and array
+
+* const result = arr.reduce((callback_function, intialization)) 
+* const result = arr.reduce(((_, _)=>{}, intialization))
+* const result = arr.reduce(((accumulator(acc), currrent_value(curr))=>{
+  e.g.acc = acc+curr // will go into ac cumulator
+return a will also goes into accumulator
+accumulator will collect produced result
+ }, intialization))
+
+* const result = arr.reduce(((_, _, index, array)=>{}, intialization))
+
+### Create Element in DOM ###
+
+* `appendChild` use to add an a element and statement
+* `append` use to add multiple element and statements
+
+* ``createTextNode``  TextNode (Text without any tag) space and next line came within textnode
+
+* `createAttribute` use to which attribute we want to create and add
+* `setAttributeNode` use to attribute attached to element
+
+* `getAttribute` use to get that attribute access
+* `setAttribute` use to set an attribute/ Update
+* `removeAttribute` use to remove any attribute
+
+* `prepend` use to attach on top/ front
+* `append` use to attach on last/ back
+
+* `replaceChild(newNode, oldNode)` use to replace element
+* `insertAdjacentElement` use to create a element before/after end, before/after begin 
+
+* `remove()` use to remove element
+
+
+### From in JS ###
+
+
+
+
+
+
