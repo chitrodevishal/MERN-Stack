@@ -58,6 +58,17 @@ accumulator will collect produced result
 
 ### From in JS ###
 
+* `event.target` we get element.
+* `event.target.id` we get element id
+* `event.target.value` 
+ to capture user input from HTML form elements (like text boxes, dropdowns, and radio buttons) 
+* `input` - one by one we get access
+* `change` - we get when we change the field
+* `focus` - doesn't follow bubbling
+* `focusin` - does follow bubbling and print value when we change focus
+* `focusout/ blur` - doesn't follow bubbling & print value when we change focus out
+
+
 
 
 

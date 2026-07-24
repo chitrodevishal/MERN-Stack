@@ -4,7 +4,7 @@ const form = document.querySelector("form");
 
 // })
 // form.addEventListener("input", (event)=>{
-//     console.log(event.target.value)
+//     console.log(event.target.value) // one by one we get access
 
 // })
 // form.addEventListener("change", (event)=>{
