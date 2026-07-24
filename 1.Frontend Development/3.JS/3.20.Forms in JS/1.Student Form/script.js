@@ -53,17 +53,31 @@ const form = document.querySelector("form");
 //   result.innerText = `My Name is ${first.value} ${second.value}`;
 // });
 
-
-form.addEventListener("submit", (event)=>{
-    event.preventDefault()
-    const data = new FormData(form)
-    console.log(data)
-    // console.log(Array.from(data.keys()))
-    // console.log(Array.from(data.values()))
-    // console.log(Array.from(data.entries()))
-    for(let [i, j] of data.entries())
-    {
-        console.log(i, j)
+form.addEventListener("submit", (event) => {
+    const reset = document.querySelector("#reset")
+  event.preventDefault();
+  const data = new FormData(form);
+  console.log(data);
+  let first = "";
+  let last = "";
+  // console.log(Array.from(data.keys()))
+  // console.log(Array.from(data.values()))
+  // console.log(Array.from(data.entries()))
+  for (let [i, j] of data.entries()) {
+    console.log(i, j);
+    if (i === "first name") {
+      first = j;
     }
-})
+
+    if (i === "Last Name") {
+      last = j;
+    }
+  }
+  const result = document.querySelector("p");
+  result.innerHTML = `My name is ${first} ${last}`;
+  
+  reset.addEventListener("click", () => {
+  result.innerHTML = "";})
+  
+});
 
