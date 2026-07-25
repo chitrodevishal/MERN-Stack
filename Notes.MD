@@ -67,6 +67,9 @@ accumulator will collect produced result
 * `focus` - doesn't follow bubbling
 * `focusin` - does follow bubbling and print value when we change focus
 * `focusout/ blur` - doesn't follow bubbling & print value when we change focus out
+* `Submit` - form Submitted
+* `Reset` - form Reset
+* `event.preventDefault();` it prevent and didn't refresh
 
 
 

@@ -16,7 +16,7 @@ After clicking the **Submit** button, the application should:
 * Calculate the total score out of 10.
 * Display the final score to the user.
 
-The application should also provide a **Reset** or **Play Again** button that clears the current quiz and generates a new set of 10 random questions.
+The application should also provide a **Reset** or **Submit** button that clears the current quiz and Submit & generates a new set of 10 random questions.
 
 ## Requirements
 
@@ -33,14 +33,3 @@ The application should also provide a **Reset** or **Play Again** button that cl
 * Display the final score after submission.
 * Allow the user to reset the quiz and generate a new random set of questions.
 
-## Bonus Features (Optional)
-
-* Randomize the order of options.
-* Add a countdown timer.
-* Show correct and incorrect answers after submission.
-* Display percentage and grade.
-* Save the highest score using `localStorage`.
-* Add categories such as History, Geography, Science, Sports, and Current Affairs.
-* Show one question at a time with Next and Previous buttons.
-* Add a progress bar indicating quiz completion.
-* Make the application fully responsive for mobile and desktop devices.
