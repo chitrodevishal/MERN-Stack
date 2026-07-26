@@ -645,7 +645,15 @@ function Randomquestion() {
   // return [...data]; // here we convert set into an array
 
   // nlog(n)
-  QuestionBank.sort(() => Math.random() - 0.5);
+
+  // const arr = [10, 100, 20]
+  // arr.sort()
+  // (3) [10, 100, 20]
+
+  // arr.sort((a,b)=>a-b)
+  // (3) [10, 20, 100]
+ // here we randomly sort the questionbank array, Math.random() value lie between 0<= Math.random() value >=1 like 0.6 and we substract 0.5 (0.6-0.5 == 0.1 positive so no changes if  Math.random() value  be like 0.2 - 0.5 == -0.3 then swap the values and in 0 no changes)
+  QuestionBank.sort(() => Math.random() - 0.5); // value lie between -0.5 to +0.5
   return QuestionBank.slice(0, 10);
 }
 
