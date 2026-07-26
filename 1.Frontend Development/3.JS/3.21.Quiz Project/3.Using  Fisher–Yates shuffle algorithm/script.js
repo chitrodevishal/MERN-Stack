@@ -652,9 +652,29 @@ function Randomquestion() {
 
   // arr.sort((a,b)=>a-b)
   // (3) [10, 20, 100]
- // here we randomly sort the questionbank array, Math.random() value lie between 0<= Math.random() value >=1 like 0.6 and we substract 0.5 (0.6-0.5 == 0.1 positive so no changes if  Math.random() value  be like 0.2 - 0.5 == -0.3 then swap the values and in 0 no changes)
-  QuestionBank.sort(() => Math.random() - 0.5); // value lie between -0.5 to +0.5
-  return QuestionBank.slice(0, 10);
+  // here we randomly sort the questionbank array, Math.random() value lie between 0<= Math.random() value >=1 like 0.6 and we substract 0.5 (0.6-0.5 == 0.1 positive so no changes if  Math.random() value  be like 0.2 - 0.5 == -0.3 then swap the values and in 0 no changes)
+  // QuestionBank.sort(() => Math.random() - 0.5); // value lie between -0.5 to +0.5
+  // return QuestionBank.slice(0, 10);
+
+  // Here we were using  Fisher–Yates shuffle algorithm
+  // Time Complexity
+  // Time: O(n)
+  // Space: O(n) (because we copied the array)
+
+  const arr = []
+  let length = QuestionBank.length
+  for(let i=0;i<20;i++){
+    const index = Math.floor(Math.random()*length)
+    arr.push(QuestionBank[index])
+    // swap
+    [QuestionBank[index], QuestionBank[length-1]] = [QuestionBank[length-1], QuestionBank[index]]
+    length--
+  }
+  return arr
+
+
+
+
 }
 
 // Step2. Create ⬇
