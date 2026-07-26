@@ -644,10 +644,9 @@ function Randomquestion() {
   // }
   // return [...data]; // here we convert set into an array
 
-
   // nlog(n)
-  QuestionBank.sort(()=>Math.random()-0.5)
-  return QuestionBank.slice(0,10)
+  QuestionBank.sort(() => Math.random() - 0.5);
+  return QuestionBank.slice(0, 10);
 }
 
 // Step2. Create ⬇
@@ -664,15 +663,26 @@ function Randomquestion() {
 // 2.1. Create a div by classname question for this first we have to select form
 // 2.2.then we make a const var. in which we store the 10 random question
 const form = document.querySelector("form");
-const quizquestions = Randomquestion();
-const correctAnswers = {q1:"answer"};
+const quizquestions = Randomquestion(); // here we get 10 random question by calling randomquestion() function
+const correctAnswers = {};
 // key: values
+
+// obj  = {question: "What does HTML stand for?",
+//     options (Array): [
+//       "Hyper Text Markup Language",
+//       "High Text Machine Language",
+//       "Hyper Transfer Markup Language",
+//       "Home Tool Markup Language",
+//     ],
+//     answer: "Hyper Text Markup Language",
+//   }
 
 quizquestions.forEach((obj, index) => {
   const QuestionDiv = document.createElement("div");
   QuestionDiv.className = "question"; //<div class="question">
   // obj[key] = value
-  correctAnswers[`q${index+1}`] = obj['answer']
+  correctAnswers[`q${index + 1}`] = obj["answer"];
+
   const para = document.createElement("p");
   para.innerHTML = `${[index + 1]}. ${obj.question}`; // <p>1. What is the capital of India?</p>
   QuestionDiv.appendChild(para);
