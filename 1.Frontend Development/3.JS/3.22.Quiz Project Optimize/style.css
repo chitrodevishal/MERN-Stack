@@ -18,6 +18,8 @@ body {
   width: 70%;
   border-radius: 10px;
   overflow: scroll;
+  /*   Hides scrollbar in Firefox  */
+  scrollbar-width: none;     
   background-color: white;
 }
 input{
