@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.container {
+  height: 550px;
+  width: 100%;
+  max-width: 500px;
+  background-color: gray;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  border: 5px solid white;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+h1 {
+  text-align: center;
+  margin: 20px 0px;
+  position: absolute;
+  text-decoration: underline;
+  top: 0px;
+  font-size: clamp(24px, 6vw, 32px);
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.cell {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 10px whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  font-weight: 900;
+  padding: 20px;
+}
+
+button {
+  height: 50px;
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px blue;
+  background-color: lightblue;
+  font-size: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 520px) {
+  .container {
+    height: auto;
+    min-height: 480px;
+    padding: 60px 15px 30px;
+  }
+
+  .board {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .cell {
+    width: clamp(70px, 22vw, 90px);
+    height: clamp(70px, 22vw, 90px);
+    font-size: clamp(40px, 12vw, 55px);
+    padding: 10px;
+  }
+
+  button {
+    width: 60%;
+    min-width: 150px;
+    font-size: 18px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 360px) {
+  .board {
+    gap: 8px;
+  }
+
+  .cell {
+    width: 65px;
+    height: 65px;
+    font-size: 36px;
+  }
+}
+
