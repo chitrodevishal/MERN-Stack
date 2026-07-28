@@ -7,7 +7,7 @@
 
 // this is async task (async task expect a call back function)
 // console.log("10")
-// setTimeout(()=>{ // it is not a part of JS
+// setTimeout(()=>{ // it is not a part of JS, it's a part of web api
 //     console.log("20")
 // },2000)
 // console.log("30")
