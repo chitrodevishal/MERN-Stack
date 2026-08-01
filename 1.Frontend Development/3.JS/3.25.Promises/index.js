@@ -1,4 +1,4 @@
-const city = "New Delhi"
+const city = "Sri Lanka"
 const promises =
   fetch(`http://api.weatherapi.com/v1/current.json?key=dba4a134293d4a89aa5144158262807&q=${city}&aqi=yes
 `); // Promise { <pending> } because it's async task it took some time to execute.
@@ -41,4 +41,4 @@ const promises =
 // fetch(`http://api.weatherapi.com/v1/current.json?key=dba4a134293d4a89aa5144158262807&q=Indore&aqi=yes
 // `).then((data) => data.json()).then((data) => console.log(data));
 // promises.then((data) => data.json()).then((data) => console.log(data)).catch((error)=>console.log(error))
-promises.then((data) => data.json()).then((data) => console.log(data.current.temp_c)).catch((error)=>console.log(error))
+promises.then((data) => data.json()).then((data) => console.log(data)).catch((error)=>console.log(error))
