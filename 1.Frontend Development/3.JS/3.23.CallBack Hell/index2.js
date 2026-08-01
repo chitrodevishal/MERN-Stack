@@ -16,7 +16,7 @@
 
 // this is sync task
 console.log("10")
-const date = new Date()
+const date = Date.now()
 while(Date.now()-date<2000){
     // wait for 2 sec
 }
