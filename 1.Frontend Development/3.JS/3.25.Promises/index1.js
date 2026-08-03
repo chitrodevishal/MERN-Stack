@@ -26,21 +26,21 @@
 //     console.log("Order Delivered");
 //   }, 2000);
 // }
-// // orderpizza(preparingpizza)
+// orderpizza(preparingpizza)
 // orderpizza(() => {
-//   //
+//   
 //   preparingpizza(() => {
-//     // Inversion of Control (IoC) with callbacks :- You give your function (callback) to another function, and that function decides when to run it.
+//     Inversion of Control (IoC) with callbacks :- You give your function (callback) to another function, and that function decides when to run it.
 //     orderpickup(() => {
 //       orderdelivery();
 //     });
 //   });
 // });
 
-// // You wrote preparingpizza().
-// // But you don't call it yourself.
-// // You give it to orderpizza().
-// // orderpizza() calls it after 2 seconds.
+// /You wrote preparingpizza().
+//  But you don't call it yourself.
+//  You give it to orderpizza().
+//  orderpizza() calls it after 2 seconds.
 
 // const cart = ["Pizza", "Burger", "Sandwich", "Coca-Cola"];
 // function orderpizza(cart, callback) {
