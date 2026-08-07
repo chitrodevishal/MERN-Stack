@@ -73,6 +73,29 @@ accumulator will collect produced result
 
 
 
+### TS ###
+ Definitions
+- Compile time: TypeScript checks types before running the code.
+- Run time: The code is actually executed.
+JIT (Just-In-Time): The JavaScript engine (V8) compiles JavaScript while it is running.
+
+In one line:
+
+- TypeScript = Compile time + Runtime
+- JavaScript = Runtime + JIT
+
+| Feature             | JavaScript (JS)    | TypeScript (TS)                   |
+| ------------------- | ------------------ | --------------------------------- |
+| Type checking       | Runtime            | Compile time                      |
+| Compilation         | JIT (Just-In-Time) | Transpiles to JS before execution |
+| Compile-time errors | ❌ No               | ✅ Yes                             |
+| Runtime errors      | ✅ Yes              | ✅ Yes                             |
+| Static typing       | ❌ No               | ✅ Yes                             |
+| JIT compilation     | ✅ Yes (V8 engine)  | ✅ After conversion to JS          |
+
+
+
+
 
 
 
