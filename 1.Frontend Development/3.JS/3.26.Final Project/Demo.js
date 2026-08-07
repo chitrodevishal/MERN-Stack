@@ -63,7 +63,7 @@ for (let i = 0; i < 100; i++) {
   obj["Distance"] = Math.floor(Math.random() * 50 + 1);
   obj["Offers"] = Math.floor(Math.random() * 56 + 25);
   obj["Alcohol"] = Math.random() > 0.8;
-  obj["Restaurant Opening time"] = Math.floor(Math.random() * 14 + 11);
+  obj["Restaurant Opening time"] = Math.floor(Math.random() * 11 + 11);
   obj["Restaurant Closing time"] = (obj["Restaurant Opening time"] + 12) % 24;
   Restaurant.push(obj);
 }

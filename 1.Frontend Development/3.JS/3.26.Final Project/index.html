@@ -7,7 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="head">
+        <div class="filter-container">
+            <button id="filter">Filter</button>
+            <div id="filter-dropdown" class="filter-dropdown">
+                <div class="filter-option" data-filter="all">All Restaurants</div>
+                <div class="filter-option" data-filter="rating">High Rated (4.0+)</div>
+                <div class="filter-option" data-filter="offers">With Offers (>50)</div>
+                <div class="filter-option" data-filter="alcohol">Serves Alcohol</div>
+                <div class="filter-option" data-filter="open">Open Now</div>
+                <div class="filter-option" data-filter="price-low">Low Price (Below ₹500)</div>
+                <div class="filter-option" data-filter="price-high">High Price (Above ₹1500)</div>
+                <div class="filter-option" data-filter="nearby">Nearby (Below 10km)</div>
+            </div>
+        </div>
+        <button id="offers">Offers</button>
+        <button id="rating">Rating</button>
+        <button id="alcohol">Alcohol</button>
+        <button id="open">Open Now</button>
+    </div>
+
+
+    <!-- here we insert all cards -->
+     <div id="root"></div>
     <script src="./script.js"></script>
 </body>
 </html>
