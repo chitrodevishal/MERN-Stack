@@ -124,3 +124,26 @@ const sum1 = function total(...arr:number[]){
 }
 
 console.log(sum1(1,2,3,4,5,6,7,8,9,10))
+
+
+// Extend Keywords
+interface human{
+  name:string,
+  age:number,
+  gender:string
+}
+
+interface student extends human{
+  rollno:number,
+  course:string
+}
+
+const obj:student = {
+  name:"Vishal",
+  age:25,
+  gender:"Male",
+  rollno:101,
+  course:"MERN"
+}
+
+console.log(obj)
