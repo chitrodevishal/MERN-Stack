@@ -130,6 +130,18 @@ React is a JavaScript library used to build user interfaces (UI) for websites an
 - The React root container is the DOM element where React renders the application. React uses a virtual DOM to efficiently update the UI and improve performance. JavaScript is single-threaded, so React runs on a single thread.
 
 
+### Bundler in React ### 
 
+A bundler is a tool that combines all your React files (JavaScript, CSS, images, TypeScript, etc.) into a few optimized files that the browser can understand.
+
+`Many files → Bundler → One optimized bundle`
+
+-npm init
+-npm install parcel
+
+Parcel is a zero-configuration bundler that combines and optimizes JavaScript, CSS, images, and other assets to build web applications.
+
+- version Major.Minor.Patches ^ (Minor and Patches) and ~ mean Patches
+- npm install react
 
 
