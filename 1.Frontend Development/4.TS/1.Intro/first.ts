@@ -22,5 +22,4 @@ let f: null = null;
 // undefined
 let g: undefined;
 // g = "Vishal"
-let name: string = "Chitrode";
 let surname: string = "Chitrode";
