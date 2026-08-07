@@ -107,6 +107,29 @@ In one line:
 
 
 ### Array of Object ###
+- After React we will continue this
+
+
+
+### ReactJs ###
+
+React is a JavaScript library used to build user interfaces (UI) for websites and web applications. It lets developers create reusable components like buttons, forms, and cards. 
+
+- React === Object
+- ReactDom === Object
+
+
+| React                   | ReactDOM                          |
+| ----------------------- | --------------------------------- |
+| Creates components      | Renders components to the browser |
+| Manages state and hooks | Updates the real DOM              |
+| Platform-independent    | Web-specific                      |
+
+- ReactDOM.render(element, document.getElementById("root")) // Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+- The React root container is the DOM element where React renders the application. React uses a virtual DOM to efficiently update the UI and improve performance. JavaScript is single-threaded, so React runs on a single thread.
+
+
 
 
 
