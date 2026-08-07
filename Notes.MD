@@ -94,9 +94,19 @@ In one line:
 | JIT compilation     | ✅ Yes (V8 engine)  | ✅ After conversion to JS          |
 
 
+### Interface ###
+ It is used to define the structure (shape) of an object
+ - The actual use of an interface in TypeScript is to define a contract
+
+ | Property type | Syntax                | Meaning                                |
+| ------------- | --------------------- | -------------------------------------- |
+| Required      | `name: string`        | Must be provided                       |
+| Optional      | `age?: number`        | Can be omitted                         |
+| Readonly      | `readonly id: number` | Cannot be changed after initialization |
 
 
 
+### Array of Object ###
 
 
 
