@@ -37,6 +37,7 @@ body{
   justify-content: space-evenly;
   flex-direction: row;
   margin-left: 60px;
+  flex-wrap: wrap;
   
 }
 p{
