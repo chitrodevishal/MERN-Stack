@@ -29,7 +29,7 @@ body{
 .section{
  display: flex;
   z-index: 1;
-  width: 100%;
+
   gap: 50px;
   position: fixed;
   top: 80px;
