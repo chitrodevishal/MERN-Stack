@@ -1,0 +1,65 @@
+.search-box input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+* {
+  font-family: Figtree-Regular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.section {
+  z-index: 1;
+  background-color: #fff;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 50px;
+  width: 100%;
+  margin-left: 60px;
+  display: flex;
+  position: fixed;
+  top: 80px;
+}
+
+p {
+  cursor: pointer;
+}
+
+.section p {
+  border: 1px solid #0000;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+
+.section p:hover {
+  border: 1px solid #fff;
+  box-shadow: 0 0 2px gray;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  transition: all .2s;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px #0000001a;
+}
+/*# sourceMappingURL=5.Myntra.3a01df49.css.map */

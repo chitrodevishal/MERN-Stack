@@ -1,0 +1,67 @@
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+*{
+  font-family:
+    Figtree-Regular,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+body{
+  height: 100vh;
+  width: 100vw;
+}
+#root{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.section{
+ display: flex;
+  z-index: 1;
+  width: 100%;
+  gap: 50px;
+  position: fixed;
+  top: 80px;
+  background-color: white;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-left: 60px;
+  
+}
+p{
+  cursor: pointer;
+}
+.section p{
+  border: 1px solid transparent;
+  padding:5px 15px;
+border-radius: 20px;
+
+}
+.section p:hover{
+  border: 1px solid white;
+  box-shadow: 0px 0px 2px gray;
+
+}
+
+.card{
+   border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: 0.2s ease;
+}
+.card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
