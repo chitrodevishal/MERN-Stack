@@ -29,15 +29,18 @@ body{
 .section{
  display: flex;
   z-index: 1;
-
+  padding: 0px 20px;
   gap: 50px;
   position: fixed;
+  width: 100%;
   top: 80px;
   background-color: white;
   justify-content: space-evenly;
   flex-direction: row;
   margin-left: 60px;
+  border-radius: 20px;
   flex-wrap: wrap;
+  border-style: none;
   
 }
 p{

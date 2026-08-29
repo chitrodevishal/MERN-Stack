@@ -25,10 +25,14 @@ body {
 .section {
   z-index: 1;
   background-color: #fff;
+  border-style: none;
+  border-radius: 20px;
   flex-flow: wrap;
   justify-content: space-evenly;
   gap: 50px;
+  width: 100%;
   margin-left: 60px;
+  padding: 0 20px;
   display: flex;
   position: fixed;
   top: 80px;

@@ -731,29 +731,88 @@ var _header = require("./components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _card = require("./components/Card");
 var _cardDefault = parcelHelpers.interopDefault(_card);
-var _section = require("./components/Section");
-var _sectionDefault = parcelHelpers.interopDefault(_section);
+// import Section from "./components/Section"
 var _dummy = require("../utils/dummy");
 var _dummyDefault = parcelHelpers.interopDefault(_dummy);
 const parent = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-const element = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-    children: "Hello World"
-}, void 0, false, {
-    fileName: "src/script.jsx",
-    lineNumber: 10,
-    columnNumber: 17
-}, undefined);
+function Section() {
+    function Filter() {
+        console.log("Filter");
+    }
+    function Price() {
+        console.log("Sort by Price");
+    }
+    function Relevance() {
+        console.log("Sort by Relevance");
+    }
+    function Rating() {
+        console.log("Sort by Rating");
+    }
+    function Offer() {
+        console.log("Sort by Offer");
+    }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "section",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                onClick: Filter,
+                children: "Filter"
+            }, void 0, false, {
+                fileName: "src/script.jsx",
+                lineNumber: 32,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                onClick: Price,
+                children: "Sort by Price"
+            }, void 0, false, {
+                fileName: "src/script.jsx",
+                lineNumber: 33,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                onClick: Relevance,
+                children: "Sort by Relevance"
+            }, void 0, false, {
+                fileName: "src/script.jsx",
+                lineNumber: 34,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                onClick: Rating,
+                children: "Sort by Rating"
+            }, void 0, false, {
+                fileName: "src/script.jsx",
+                lineNumber: 35,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                onClick: Offer,
+                children: "Sort by Offer"
+            }, void 0, false, {
+                fileName: "src/script.jsx",
+                lineNumber: 36,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/script.jsx",
+        lineNumber: 31,
+        columnNumber: 5
+    }, this);
+}
+_c = Section;
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/script.jsx",
-                lineNumber: 16,
+                lineNumber: 44,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sectionDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {}, void 0, false, {
                 fileName: "src/script.jsx",
-                lineNumber: 17,
+                lineNumber: 45,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -773,29 +832,30 @@ function App() {
                         offer: value.offer
                     }, index, false, {
                         fileName: "src/script.jsx",
-                        lineNumber: 31,
+                        lineNumber: 59,
                         columnNumber: 13
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/script.jsx",
-                lineNumber: 18,
+                lineNumber: 46,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true);
 }
-_c = App;
+_c1 = App;
 parent.render(App());
-var _c;
-$RefreshReg$(_c, "App");
+var _c, _c1;
+$RefreshReg$(_c, "Section");
+$RefreshReg$(_c1, "App");
 
   $parcel$ReactRefreshHelpers$3fb4.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","./components/Header":"8BCUx","./components/Card":"iMLs7","../utils/dummy":"jobel","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./components/Section":"b3UX4"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","./components/Header":"8BCUx","./components/Card":"iMLs7","../utils/dummy":"jobel","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -30359,78 +30419,6 @@ function print() {
 exports.default = clothes;
 
   $parcel$ReactRefreshHelpers$b761.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"b3UX4":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$b6a7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$b6a7.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b6a7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-function Section() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "section",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                onClick: console.log("Filter"),
-                children: "Filter"
-            }, void 0, false, {
-                fileName: "src/components/Section.jsx",
-                lineNumber: 4,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                onClick: console.log("Sort by Price"),
-                children: "Sort by Price"
-            }, void 0, false, {
-                fileName: "src/components/Section.jsx",
-                lineNumber: 5,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                onClick: console.log("Sort by Relevance"),
-                children: "Sort by Relevance"
-            }, void 0, false, {
-                fileName: "src/components/Section.jsx",
-                lineNumber: 6,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                onClick: console.log("Sort by Rating"),
-                children: "Sort by Rating"
-            }, void 0, false, {
-                fileName: "src/components/Section.jsx",
-                lineNumber: 7,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                onClick: console.log("Sort by Offer"),
-                children: "Sort by Offer"
-            }, void 0, false, {
-                fileName: "src/components/Section.jsx",
-                lineNumber: 8,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Section.jsx",
-        lineNumber: 3,
-        columnNumber: 5
-    }, this);
-}
-_c = Section;
-exports.default = Section;
-var _c;
-$RefreshReg$(_c, "Section");
-
-  $parcel$ReactRefreshHelpers$b6a7.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
