@@ -731,25 +731,32 @@ var _header = require("./components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _card = require("./components/Card");
 var _cardDefault = parcelHelpers.interopDefault(_card);
-// import Section from "./components/Section"
 var _dummy = require("../utils/dummy");
 var _dummyDefault = parcelHelpers.interopDefault(_dummy);
+var _s = $RefreshSig$();
 const parent = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-function Section() {
+function Section({ arr, setArr }) {
     function Filter() {
         console.log("Filter");
     }
     function Price() {
-        console.log("Sort by Price");
+        setArr([
+            ...arr
+        ].sort((a, b)=>a.price - b.price));
     }
-    function Relevance() {
-        console.log("Sort by Relevance");
+    function PriceAbove999() {
+        setArr([
+            ...arr
+        ].filter((value)=>value.price > 999));
     }
     function Rating() {
         console.log("Sort by Rating");
     }
     function Offer() {
-        console.log("Sort by Offer");
+        setArr([
+            ...arr
+        ].sort((a, b)=>a.offer - b.offer));
+        console.log(arr);
     }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "section",
@@ -759,7 +766,7 @@ function Section() {
                 children: "Filter"
             }, void 0, false, {
                 fileName: "src/script.jsx",
-                lineNumber: 32,
+                lineNumber: 34,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -767,15 +774,15 @@ function Section() {
                 children: "Sort by Price"
             }, void 0, false, {
                 fileName: "src/script.jsx",
-                lineNumber: 33,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                onClick: Relevance,
-                children: "Sort by Relevance"
+                onClick: PriceAbove999,
+                children: "Price Above 999"
             }, void 0, false, {
                 fileName: "src/script.jsx",
-                lineNumber: 34,
+                lineNumber: 36,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -783,7 +790,7 @@ function Section() {
                 children: "Sort by Rating"
             }, void 0, false, {
                 fileName: "src/script.jsx",
-                lineNumber: 35,
+                lineNumber: 37,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -791,28 +798,33 @@ function Section() {
                 children: "Sort by Offer"
             }, void 0, false, {
                 fileName: "src/script.jsx",
-                lineNumber: 36,
+                lineNumber: 38,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/script.jsx",
-        lineNumber: 31,
+        lineNumber: 33,
         columnNumber: 5
     }, this);
 }
 _c = Section;
 function App() {
+    _s();
+    const [arr, setArr] = (0, _react.useState)((0, _dummyDefault.default));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/script.jsx",
-                lineNumber: 44,
+                lineNumber: 48,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
+                arr: arr,
+                setArr: setArr
+            }, void 0, false, {
                 fileName: "src/script.jsx",
-                lineNumber: 45,
+                lineNumber: 50,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -825,27 +837,32 @@ function App() {
                     top: "120px",
                     marginLeft: "50px"
                 },
-                children: (0, _dummyDefault.default).map((value, index)=>{
+                children: arr.map((value, index)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
                         cloth: value.cloth,
                         price: value.price,
                         offer: value.offer
                     }, index, false, {
                         fileName: "src/script.jsx",
-                        lineNumber: 59,
+                        lineNumber: 65,
                         columnNumber: 13
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/script.jsx",
-                lineNumber: 46,
+                lineNumber: 52,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true);
 }
+_s(App, "NsTF17eB9wAuovheRqLGOjWRD98=");
 _c1 = App;
-parent.render(App());
+parent.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
+    fileName: "src/script.jsx",
+    lineNumber: 78,
+    columnNumber: 15
+}, undefined));
 var _c, _c1;
 $RefreshReg$(_c, "Section");
 $RefreshReg$(_c1, "App");

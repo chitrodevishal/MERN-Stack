@@ -1,37 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 
+import Header from "./components/Header";
+import Card from "./components/Card";
+import clothes from "../utils/dummy";
 
-import Header from "./components/Header"
-import Card from "./components/Card"
-// import Section from "./components/Section"
-import clothes from "../utils/dummy"
 const parent = ReactDOM.createRoot(document.getElementById("root"));
 
-
-
-
-function Section() {
+function Section({ arr, setArr }) {
   function Filter() {
     console.log("Filter");
   }
+
   function Price() {
-    console.log("Sort by Price");
+    setArr([...arr].sort((a, b) => a.price - b.price));
   }
-  function Relevance() {
-    console.log("Sort by Relevance");
+
+  function PriceAbove999() {
+    setArr([...arr].filter((value) => value.price > 999))
   }
+
   function Rating() {
     console.log("Sort by Rating");
   }
+
   function Offer() {
-    console.log("Sort by Offer");
+    setArr([...arr].sort((a, b) => a.offer - b.offer));
+    console.log(arr)
   }
+
   return (
     <div className="section">
       <p onClick={Filter}>Filter</p>
       <p onClick={Price}>Sort by Price</p>
-      <p onClick={Relevance}>Sort by Relevance</p>
+      <p onClick={PriceAbove999}>Price Above 999</p>
       <p onClick={Rating}>Sort by Rating</p>
       <p onClick={Offer}>Sort by Offer</p>
     </div>
@@ -39,10 +41,14 @@ function Section() {
 }
 
 function App() {
+  const [arr, setArr] = useState(clothes);
+
   return (
     <>
       <Header />
-      <Section/>
+
+      <Section arr={arr} setArr={setArr} />
+
       <div
         style={{
           display: "flex",
@@ -54,7 +60,7 @@ function App() {
           marginLeft: "50px",
         }}
       >
-        {clothes.map((value, index) => {
+        {arr.map((value, index) => {
           return (
             <Card
               key={index}
@@ -69,4 +75,4 @@ function App() {
   );
 }
 
-parent.render(App());
+parent.render(<App />);
