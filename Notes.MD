@@ -199,3 +199,245 @@ A React component is a reusable JavaScript function that returns UI elements and
 - npm create vite@latest
 - npm install
 - npm run dev
+
+# React Short Notes
+
+## 1. Hook
+
+A **Hook** is a special function provided by React that lets functional components use React features such as **state** and **side effects**.
+
+Hooks start with the word `use`.
+
+### Common Hooks
+
+* `useState()` → manages state
+* `useEffect()` → handles side effects
+* `useContext()` → accesses context
+* `useRef()` → stores a reference/value without causing a re-render
+
+Example:
+
+```jsx
+const [count, setCount] = useState(0);
+```
+
+---
+
+## 2. useState
+
+`useState()` is a React Hook used to **store and manage data that can change** inside a component.
+
+Syntax:
+
+```jsx
+const [state, setState] = useState(initialValue);
+```
+
+Example:
+
+```jsx
+const [color, setColor] = useState("black");
+```
+
+Here:
+
+* `color` → current state value
+* `setColor` → function used to update the state
+* `"black"` → initial value
+
+When we call:
+
+```jsx
+setColor("red");
+```
+
+React updates the state and **re-renders the component**.
+
+---
+
+## 3. Render
+
+**Render** means React runs the component and creates the UI based on the current state and props.
+
+For example:
+
+```jsx
+function App() {
+  return <h1>Hello</h1>;
+}
+```
+
+When `<App />` is rendered:
+
+```jsx
+root.render(<App />);
+```
+
+React runs `App()` and displays:
+
+```text
+Hello
+```
+
+### Simple meaning:
+
+**Render = Creating/displaying the UI.**
+
+---
+
+## 4. Re-render
+
+A **re-render** happens when React runs the component again because something that affects the UI has changed.
+
+Common reasons:
+
+* State changes
+* Props change
+* Context changes
+
+Example:
+
+```jsx
+const [color, setColor] = useState("black");
+
+<p onClick={() => setColor("red")}>RED</p>
+```
+
+Initially:
+
+```text
+color = "black"
+```
+
+When you click RED:
+
+```text
+setColor("red")
+       ↓
+state changes
+       ↓
+React re-renders App
+       ↓
+color is now "red"
+       ↓
+UI updates
+```
+
+### Important
+
+A re-render **does not mean the entire webpage is recreated from scratch**.
+
+React compares the new result with the previous one and updates the necessary parts of the DOM.
+
+---
+
+## Quick Revision
+
+| Term          | Meaning                                                                |
+| ------------- | ---------------------------------------------------------------------- |
+| **Hook**      | Special React function that gives functional components React features |
+| **useState**  | Hook used to store and update changing data                            |
+| **Render**    | React runs a component to create the UI                                |
+| **Re-render** | React runs the component again after relevant data changes             |
+
+### Remember this flow
+
+```text
+useState
+   ↓
+setState()
+   ↓
+State changes
+   ↓
+Re-render
+   ↓
+UI updates
+```
+### React bailout:
+ React skips re-rendering a component when its state or props haven’t meaningfully changed.
+
+ Here are **short notes** based on your code:
+
+### React Bailout
+
+* **Bailout** means React **skips re-rendering** when the state/props value has not changed.
+* Example: `setColor("red")` when `color` is already `"red"` → React can **bail out** of the update.
+* It helps improve **performance** by avoiding unnecessary renders.
+
+* `useEffect` is a React Hook used to perform **side effects** after rendering.
+* Syntax:
+
+  ```js
+  useEffect(() => {
+      // side effect
+  }, [dependency]);
+  ```
+* In your code:
+
+  ```js
+  useEffect(() => {
+      document.body.style.backgroundColor = color;
+  }, [color]);
+  ```
+* The effect runs **after the component renders** and whenever `color` changes.
+* `[color]` is the **dependency array**.
+* Here, `useEffect` is used because changing `document.body` is a **DOM side effect**.
+
+
+### `useEffect`
+
+* `useEffect` is used to perform **side effects** in a React component.
+* Side effects include DOM manipulation, API calls, timers, subscriptions, etc.
+* It runs **after the component renders**.
+* The second argument is a **dependency array**.
+* If a dependency changes, the effect runs again.
+
+**Syntax:**
+
+```jsx
+useEffect(() => {
+  // side effect
+}, [dependency]);
+```
+
+**Your example:**
+In `Colorfull.jsx`, `useEffect` changes the document background whenever `color` changes. 
+
+```jsx
+useEffect(() => {
+  document.body.style.backgroundColor = color;
+}, [color]);
+```
+
+👉 **Remember:** `useEffect` = **"Do something after rendering."**
+
+---
+
+### `useMemo`
+
+* `useMemo` is used to **memoize (remember) a calculated value**.
+* It helps avoid performing an **expensive calculation on every render**.
+* The calculation runs again only when its dependencies change.
+
+**Syntax:**
+
+```jsx
+const result = useMemo(() => {
+  return expensiveCalculation(data);
+}, [data]);
+```
+
+👉 **Remember:** `useMemo` = **"Remember a calculated value."**
+
+### Quick Difference
+
+| `useEffect`                           | `useMemo`                       |
+| ------------------------------------- | ------------------------------- |
+| Performs side effects                 | Memorizes a value               |
+| Runs after render                     | Calculates during render        |
+| Used for API calls, DOM, timers, etc. | Used for expensive calculations |
+| Doesn't return the calculated value   | Returns a memoized value        |
+
+**Easy trick:**
+**Effect → Action**
+**Memo → Value**
