@@ -441,3 +441,5 @@ const result = useMemo(() => {
 **Easy trick:**
 **Effect → Action**
 **Memo → Value**
+# Lecture wise Notes
+### 9.Password generator in React and Closure
