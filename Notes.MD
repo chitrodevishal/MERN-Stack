@@ -957,3 +957,873 @@ Even though `greet()` has finished, `meet()` still remembers `a`.
 * Returning Functions
 * Function References
 
+# 10.React GitHub Profile Viewer
+
+### 1. Project Architecture
+
+```text
+                    ┌─────────────────────┐
+                    │      main.jsx       │
+                    │ GithubProfile App   │
+                    └──────────┬──────────┘
+                               │
+                 ┌─────────────┴─────────────┐
+                 │                           │
+          ┌──────▼──────┐             ┌──────▼──────┐
+          │ Header.jsx  │             │  Body.jsx   │
+          │             │             │             │
+          │ App Title   │             │ API Logic   │
+          └─────────────┘             └──────┬──────┘
+                                             │
+                                  ┌──────────┼──────────┐
+                                  │          │          │
+                               useState    useEffect   fetch()
+                                  │          │          │
+                                  └──────────┼──────────┘
+                                             │
+                                    GitHub API Response
+                                             │
+                                             ▼
+                                      Profile Cards
+```
+
+---
+
+### 2. File Conversion
+
+You asked to use `.jsx` instead of `.js`.
+
+Recommended structure:
+
+```text
+src/
+│
+├── main.jsx
+│
+└── Component/
+    ├── Header.jsx
+    └── Body.jsx
+```
+
+Rename:
+
+```text
+main.js   → main.jsx
+Body.js   → Body.jsx
+Header.js → Header.jsx
+```
+
+Then update imports:
+
+```jsx
+import Header from "./Component/Header";
+import Body from "./Component/Body";
+```
+
+React/Vite can usually resolve `.jsx` automatically.
+
+---
+
+### 3. Component Relationship
+
+### Parent → Child Flow
+
+```text
+GithubProfile
+      │
+      │ renders
+      ▼
+ ┌─────────────┐
+ │   Header    │
+ └─────────────┘
+
+ ┌─────────────┐
+ │    Body     │
+ └─────────────┘
+```
+
+Your main component acts as the **container**.
+
+Concept:
+
+```jsx
+function GithubProfile() {
+  return (
+    <>
+      <Header />
+      <Body />
+    </>
+  );
+}
+```
+
+### Learning Point
+
+| Concept           | Meaning                                     |
+| ----------------- | ------------------------------------------- |
+| Component         | Reusable UI function                        |
+| Parent Component  | Component containing other components       |
+| Child Component   | Component rendered inside another component |
+| Fragment `<> </>` | Groups elements without extra HTML          |
+
+Your app structure is correctly componentized. 
+
+---
+
+### 4. Header Component
+
+Flow:
+
+```text
+Header Component
+       │
+       ▼
+Returns JSX
+       │
+       ▼
+<div id="heading">
+       │
+       ▼
+<h1>Github Profile Viewer</h1>
+```
+
+Current purpose:
+
+> Display the application heading.
+
+This is a simple **presentational component**. 
+
+---
+
+### 5. Body Component — The Main Brain 🧠
+
+The Body component handles:
+
+```text
+USER INPUT
+    │
+    ▼
+React State
+    │
+    ▼
+API Request
+    │
+    ▼
+GitHub API
+    │
+    ▼
+JSON Response
+    │
+    ▼
+Update State
+    │
+    ▼
+Profile Cards Displayed
+```
+
+This is where most React concepts are being used. 
+
+---
+
+### 6. useState Visual Explanation
+
+You have:
+
+```jsx
+const [Profile, setProfile] = useState([]);
+```
+
+Think of it like this:
+
+```text
+          useState([])
+              │
+      ┌───────┴────────┐
+      │                │
+   Profile         setProfile
+      │                │
+ Current Data      Update Data
+```
+
+### Example
+
+Initially:
+
+```text
+Profile = []
+```
+
+After API:
+
+```text
+Profile = [
+  User 1,
+  User 2,
+  User 3,
+  ...
+]
+```
+
+Then:
+
+```jsx
+setProfile(data);
+```
+
+React automatically updates the UI.
+
+### Important React Flow
+
+```text
+State Changes
+     │
+     ▼
+React Detects Change
+     │
+     ▼
+Component Re-renders
+     │
+     ▼
+New UI Appears
+```
+
+---
+
+### 7. Second State
+
+You also have:
+
+```jsx
+const [numberofProfile, setnumberofProfile] = useState("");
+```
+
+Purpose:
+
+```text
+Input Field
+     │
+     │ User types 5
+     ▼
+numberofProfile = "5"
+     │
+     ▼
+Click Button
+     │
+     ▼
+Number(numberofProfile)
+     │
+     ▼
+generateProfile(5)
+```
+
+Visual:
+
+```text
+┌──────────────────┐
+│ Input: "5"       │
+└────────┬─────────┘
+         │
+         ▼
+ setnumberofProfile("5")
+         │
+         ▼
+ React State Updated
+         │
+         ▼
+ Button Click
+         │
+         ▼
+ generateProfile(5)
+```
+
+---
+
+### 8. API Function Flow
+
+Your important function:
+
+```jsx
+async function generateProfile(count)
+```
+
+Complete learning flow:
+
+```text
+generateProfile(count)
+        │
+        ▼
+Generate Random Number
+        │
+        ▼
+Build GitHub API URL
+        │
+        ▼
+fetch(URL)
+        │
+        ▼
+Wait for Response
+        │
+        ▼
+response.json()
+        │
+        ▼
+Receive User Data
+        │
+        ▼
+setProfile(data)
+        │
+        ▼
+React Re-renders UI
+```
+
+From your code, the API request uses GitHub's users endpoint with `since` and `per_page` parameters. 
+
+---
+
+### 9. Understanding async / await
+
+Your code:
+
+```jsx
+const response = await fetch(url);
+const data = await response.json();
+```
+
+Think of `await` as:
+
+> "Wait here until this operation finishes."
+
+### Visual
+
+```text
+JavaScript
+    │
+    ▼
+fetch API
+    │
+    │ ⏳ Waiting
+    │
+    ▼
+Response arrives
+    │
+    ▼
+Convert to JSON
+    │
+    │ ⏳ Waiting
+    │
+    ▼
+Data Ready
+```
+
+---
+
+### 10. useEffect Flow
+
+Your code:
+
+```jsx
+useEffect(() => {
+  generateProfile(10);
+}, []);
+```
+
+The empty dependency array:
+
+```jsx
+[]
+```
+
+means:
+
+```text
+Component Loads
+      │
+      ▼
+useEffect Runs
+      │
+      ▼
+generateProfile(10)
+      │
+      ▼
+10 GitHub Profiles Loaded
+```
+
+### Dependency Cheat Sheet
+
+```text
+useEffect(fn, [])
+
+Runs once when component mounts.
+
+
+useEffect(fn, [name])
+
+Runs when name changes.
+
+
+useEffect(fn)
+
+Runs after every render.
+```
+
+Your implementation loads 10 profiles automatically when the Body component first appears. 
+
+---
+
+### 11. Controlled Input
+
+Your input:
+
+```jsx
+<input
+  value={numberofProfile}
+  onChange={(e) => setnumberofProfile(e.target.value)}
+/>
+```
+
+Flow chart:
+
+```text
+User Types
+     │
+     ▼
+onChange Event
+     │
+     ▼
+e.target.value
+     │
+     ▼
+setnumberofProfile()
+     │
+     ▼
+State Updated
+     │
+     ▼
+Input Displays New Value
+```
+
+This is called a:
+
+### Controlled Component
+
+Because React controls the input value through state.
+
+
+
+---
+
+### 12. Button Event Flow
+
+```jsx
+<button
+  onClick={() => generateProfile(Number(numberofProfile))}
+>
+```
+
+Visual:
+
+```text
+       USER
+         │
+         ▼
+   Click Button
+         │
+         ▼
+     onClick
+         │
+         ▼
+Convert String → Number
+         │
+         ▼
+generateProfile(number)
+         │
+         ▼
+Fetch New Profiles
+         │
+         ▼
+Update UI
+```
+
+---
+
+### 13. Array `.map()` Visualization
+
+Your code:
+
+```jsx
+Profile.map((value) => {
+   return (...)
+})
+```
+
+Suppose API returns:
+
+```text
+[
+ User A,
+ User B,
+ User C
+]
+```
+
+React map does this:
+
+```text
+User A ───► Card A
+User B ───► Card B
+User C ───► Card C
+```
+
+Final UI:
+
+```text
+┌──────────┐ ┌──────────┐ ┌──────────┐
+│ Avatar   │ │ Avatar   │ │ Avatar   │
+│ User A   │ │ User B   │ │ User C   │
+│ Profile  │ │ Profile  │ │ Profile  │
+└──────────┘ └──────────┘ └──────────┘
+```
+
+This is called:
+
+### Dynamic Rendering
+
+React creates UI based on data.
+
+
+
+---
+
+### 14. Why `key={value.id}`?
+
+Your code:
+
+```jsx
+<div key={value.id}>
+```
+
+React needs a unique identifier.
+
+Without key:
+
+```text
+React: Which item changed? 🤔
+```
+
+With key:
+
+```text
+User ID = 1 → This card
+User ID = 2 → This card
+User ID = 3 → This card
+```
+
+Benefits:
+
+* Faster UI updates
+* Better React reconciliation
+* Avoids React warnings
+
+---
+
+### 15. Complete Application Data Flow
+
+This is the most important flowchart for revision:
+
+```text
+                  APP START
+                      │
+                      ▼
+             GithubProfile Component
+                      │
+             ┌────────┴────────┐
+             ▼                 ▼
+          Header              Body
+             │                 │
+             ▼                 ▼
+        App Title         useEffect()
+                                │
+                                ▼
+                       generateProfile(10)
+                                │
+                                ▼
+                           GitHub API
+                                │
+                                ▼
+                         Receive JSON Data
+                                │
+                                ▼
+                        setProfile(data)
+                                │
+                                ▼
+                           React State
+                                │
+                                ▼
+                          Profile.map()
+                                │
+                                ▼
+                         Render Cards
+```
+
+---
+
+### 16. User Interaction Flow
+
+```text
+┌─────────────────────┐
+│ User enters number  │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ React State Updates │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ User clicks Search  │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ generateProfile()   │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Fetch GitHub API    │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Update Profile State│
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ New Cards Display   │
+└─────────────────────┘
+```
+
+---
+
+### 17. Concepts Used in Your Project
+
+### React Knowledge Map
+
+```text
+                         REACT
+                           │
+          ┌────────────────┼────────────────┐
+          │                │                │
+     Components          Hooks             Events
+          │                │                │
+      ┌───┴───┐       ┌────┴────┐      onClick
+      │       │       │         │      onChange
+    Header   Body   useState  useEffect
+                        │
+                        ▼
+                      State
+                        │
+                        ▼
+                    Re-render
+```
+
+---
+
+### 18. Important Terms Flashcards 🧠
+
+### Component
+
+```text
+Reusable piece of UI
+```
+
+Example:
+
+```jsx
+<Header />
+```
+
+---
+
+### State
+
+```text
+Data managed by React
+```
+
+Example:
+
+```jsx
+const [Profile, setProfile] = useState([]);
+```
+
+---
+
+### useEffect
+
+```text
+Runs side effects after rendering.
+```
+
+Example use:
+
+* API calls
+* Timers
+* Event listeners
+
+---
+
+### API
+
+```text
+Application Programming Interface
+```
+
+Your project:
+
+```text
+React App ←→ GitHub API
+```
+
+---
+
+### Fetch
+
+```text
+Used to request data from an API.
+```
+
+---
+
+### map()
+
+```text
+Converts an array of data into multiple UI elements.
+```
+
+---
+
+### Controlled Input
+
+```text
+Input controlled using React state.
+```
+
+---
+
+### 19. Current Project Improvements
+
+Your own comments already identify the next learning steps:
+
+```text
+Current Project
+      │
+      ├── Try/Catch
+      │
+      ├── useCallback
+      │
+      └── Search User by Name
+```
+
+These are excellent next steps and are explicitly noted in your Body component. 
+
+### Recommended Learning Roadmap
+
+```text
+STEP 1 ✅
+Components
+     │
+STEP 2 ✅
+useState
+     │
+STEP 3 ✅
+useEffect
+     │
+STEP 4 ✅
+API Fetching
+     │
+STEP 5 ⏭
+Error Handling (try/catch)
+     │
+STEP 6 ⏭
+Loading State
+     │
+STEP 7 ⏭
+Search GitHub User by Name
+     │
+STEP 8 ⏭
+useCallback
+     │
+STEP 9 ⏭
+Better UI + CSS
+```
+
+---
+
+### 20. Suggested `.jsx` Version Structure
+
+Your final files should ideally be:
+
+```text
+main.jsx
+   │
+   ├── imports React
+   ├── imports Header.jsx
+   ├── imports Body.jsx
+   │
+   ▼
+GithubProfile
+   │
+   ├── <Header />
+   └── <Body />
+
+
+Header.jsx
+   │
+   ▼
+Displays title
+
+
+Body.jsx
+   │
+   ├── State
+   ├── API Function
+   ├── useEffect
+   ├── Input
+   ├── Button
+   └── Profile Cards
+```
+
+---
+
+### 🎯 One-Line Project Summary
+
+> **This React project fetches random GitHub user profiles using the GitHub API, stores them in React state, and dynamically displays them as profile cards.**
+
+### 🧠 Memory Formula
+
+```text
+INPUT
+  ↓
+STATE
+  ↓
+EVENT
+  ↓
+FUNCTION
+  ↓
+API
+  ↓
+DATA
+  ↓
+STATE UPDATE
+  ↓
+RE-RENDER
+  ↓
+UI
+```
+
+This is the core flow you should remember for your project.
+
+
