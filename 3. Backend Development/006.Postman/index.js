@@ -1,17 +1,20 @@
-const express = require("express")
-const app = express()
-app.use(express.json())
-// app.use("/", (req, res) => res.send({name:"Vishal chitrode"}))
-// app.use("/user", (req, res) => res.send({name:"Vishal chitrode"}))
-app.get("/user", (req, res) => res.send({name:"Vishal chitrode"}))
-app.put("/user", (req, res) => res.send({name:"Vishal chitrode"}))
-app.post("/user", (req, res)=>{
-    res.send("Success")
-    console.log(req.body) // undefined
-})
-app.listen(1707,()=>{
-    console.log("Hello World")
-})
+const express = require("express");
+const app = express();
 
+app.use(express.json()); //This is used to get the data from the body of the request
 
-
+// app.use("/", (req, res) => {
+//   res.send({ name: "Vishal Chitrode" });
+// });
+app.get("/", (req, res) => {
+  console.log();
+  res.send({ name: "Vishal Chitrode" });
+}); //This show GET Method if we didn't mentioned anything it's bydefault set to GET Method
+app.post("/user", (req, res) => {
+  console.log("Data Saved");
+  // console.log(typeof req.body); 
+  console.log(typeof req.body.age); 
+  console.log(req.body); //Here we get undefined for we need use parser like express.json() to get the data from the body of the request
+  res.send({ name: "This is Post Method" });
+});
+app.listen(3000, () => {});
