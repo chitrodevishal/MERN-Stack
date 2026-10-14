@@ -1,3 +1,5 @@
 {
-    "name":"Vishal"
+    "name":"Vishal",
+    "age":23,
+    "city":"Indore"
 }

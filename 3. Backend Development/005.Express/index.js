@@ -15,7 +15,12 @@ app.use("/contact/:id/:user", (req, res) => {
 })
 app.use("/", (req, res)=>{
     res.send("Hello World")
-})
-app.listen(1707, () => {
+}) // if we place this top this created a problem 
+app.listen(3000, () => {
   console.log("Server Created");
 });
+
+// ? char became optional
+// + we can repeated
+// * any character
+// : parmas

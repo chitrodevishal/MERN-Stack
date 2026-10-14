@@ -13,6 +13,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(1707, () => {
+server.listen(3000, () => {
   console.log("Hello world");
 });
