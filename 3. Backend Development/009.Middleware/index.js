@@ -1,14 +1,37 @@
-const express = require("express")
-const app = express()
-app.use(express.json())
-app.get("/user",(req, res)=>{
+const express = require("express");
+const app = express();
+app.use(express.json());
+app.get(
+  "/book",
+  (req, res, next) => {
+    // console.log("First one")
     console.log("First")
-    res.send("This is Middleware")
-    console.log("First one") // we can't send more than one response
-}, (req, res)=>{ // Here our first function complete
-    console.log("Second")
-    res.send("This is second middleware")
-})
-app.listen(8000, ()=>{
-    console.log("Sever is live!")
-})
+    // res.send("First");
+    // console.log("First two")
+    next();
+    console.log("Sixth")
+  }, // Router
+  (req, res, next) => {
+    // res.send("Second");
+    console.log("Second");
+    next();
+    console.log("Fifth")
+  }, // Middleware
+  (req, res, next) => {
+    res.send("Third");
+    console.log("Third");
+    next();
+    console.log("Fourth");
+  } // response handler/ request handler
+);
+
+// First
+// Second
+// Third
+// Fourth
+// Fifth
+// Sixth
+
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
+});

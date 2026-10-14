@@ -25,9 +25,10 @@ const books = [
 ];
 
 app.get("/books", (req, res) => {
-  //  res.send(req.body)
+  //  res.send(books)
   //  res.send(req.query)
   // console.log(req.query);
+  // res.send(req.body)
   res.send(books.filter((info) => info.author === req.query.author));
 });
 
