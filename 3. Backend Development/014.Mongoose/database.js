@@ -1,0 +1,10 @@
+import dns from "node:dns";
+import mongoose, { Schema } from "mongoose";
+import "dotenv/config";
+
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
+await mongoose.connect(process.env.MONGODB_URI);
+
+const userSchema = new Schema({}, { strict: false });
+export const User = mongoose.model("User", userSchema);
