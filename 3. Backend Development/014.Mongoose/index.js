@@ -7,6 +7,7 @@ app.use(express.json());
 app.get("/users", async (req, res) => {
   const users = await User.find({});
   res.json(users);
+  console.log(users)
 });
 app.post("/users", async (req, res) => {
   const user = await User.create(req.body);
