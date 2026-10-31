@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI Sample Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 16px;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 32px;
+            font-size: 1.1rem;
+        }
+        .card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        .card h3 {
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        .card p {
+            color: #555;
+        }
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 32px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 GenAI with JavaScript</h1>
+        <p class="subtitle">Welcome to the MERN Stack Learning Project</p>
+
+        <div class="card">
+            <h3>📚 What You'll Learn</h3>
+            <p>Building Generative AI applications using JavaScript, Node.js, and modern AI APIs.</p>
+        </div>
+
+        <div class="card">
+            <h3>🛠️ Tech Stack</h3>
+            <p>Node.js • Express • MongoDB • Mongoose • AI/ML APIs</p>
+        </div>
+
+        <div class="card">
+            <h3>📁 Project Structure</h3>
+            <p>This sample demonstrates a clean starting point for your GenAI journey.</p>
+        </div>
+
+        <button class="btn" onclick="showMessage()">Get Started</button>
+
+        <div class="footer">
+            <p>MERN Stack Learning - GenAI Module</p>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert('🎉 Welcome to your GenAI learning journey!\n\nNext steps:\n1. Set up your backend API\n2. Connect to AI services\n3. Build something amazing!');
+        }
+    </script>
+</body>
+</html>
